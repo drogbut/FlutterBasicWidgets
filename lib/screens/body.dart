@@ -179,6 +179,7 @@ class _BodyState extends State<Body> {
               MyContainer(
                   context,
                   [
+                    MyCustomText("My custom Image", ),
                     MyPaddingWithChild(
                       child: Image(image: logoImage,),
                     ),
@@ -186,7 +187,7 @@ class _BodyState extends State<Body> {
                       height: 250.0,
                       width: MediaQuery.of(context).size.width/1.5,
                       fit: BoxFit.cover,)),
-                    MyCustomText("My custom text"),]
+                    ]
               ),
               
               new RaisedButton(
