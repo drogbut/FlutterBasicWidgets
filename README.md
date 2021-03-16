@@ -1,16 +1,32 @@
-# mise_en_page
+# Basic Widgets Examples
 
-A new Flutter application.
+Here you will find a quick way to customise the basic flutter widgets to your taste. 
 
-## Getting Started
+## Run this project
 
-This project is a starting point for a Flutter application.
+**EDIT** : No need of running the project, simply run the code in the new official Flutter online compiler [DartPad](https://dartpad.dartlang.org/flutter).
 
-A few resources to get you started if this is your first Flutter project:
+### Still want to run the project?
+- Fork this project.
+- Rename the directory to "my_basic_widgets" or something with all_lowercase_and_underscore. (Unfortunately, Flutter does not like capital letters.)
+- In your terminal, run flutter create . This will create the android and iOS projects for you.
+- Run in your emulator or device.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## This project helped you? Buy me a coffee to support me! [PayPal](https://paypal.me/drogbut)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Examples
+
+## 
+
+## 
+
+## 
+
+## 
+
+## 
+
+## 
+
+
+
