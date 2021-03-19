@@ -27,13 +27,22 @@ This widget is useful if you want to overlay children in a simple way, for examp
 
 
  
-|
+| Stack with Image and gradient  | |
 
-<p>Here is an example of AppleScript:</p>
-
-<pre><code>tell application "Foo"
-    beep
-end tell
+<pre><code>
+ @override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: [
+        new MyBackgroundImage(imagePath: "assets/images/image1.jpg",),
+        Scaffold(
+          backgroundColor: Colors.transparent,
+          appBar: new MyAppBar(widget.title, 20.0, color: Colors.transparent,),
+          body:  Container(),         
+        ),
+      ],
+    );
+  }
 </code></pre>
 
 |<img src="assets/images/Stack.png" width="200">|
