@@ -21,12 +21,14 @@ A widget that positions its children relative to its box.
 This widget is useful if you want to overlay children in a simple way, for example overlapping the appBar, the Drawer and the body on a background image.
 ### Try out Stack widget and it's properties directly from [DartPad](https://dartpad.dev/d548285fd710d4c94cb1ff59835b85bd?null_safety=true) 
 
-| Stack with Image and gradient        | Are       | 
-| ------------- |:-------------:|
-| col 3 is      | ![Stack](assets/images/Stack.png)| 
- 
-| ---
-@override
+<table>
+    <tr>
+        <td>App Background with image/Gradient</td>
+        <td> </td>
+    </tr>
+      <tr>
+        <td><pre><code>
+ @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
@@ -39,9 +41,58 @@ This widget is useful if you want to overlay children in a simple way, for examp
       ],
     );
   }
+  </code></pre> 
+  </td>
+        <td><img src="assets/images/Stack.png" width="200"></td>
+    </tr>
+</table>
+
+## ShaderMask
+textfiled 1
+textfiled 1
+### Try out ShaderMask widget and it's properties directly from [DartPad](https://dartpad.dev/d548285fd710d4c94cb1ff59835b85bd?null_safety=true) 
+
+<table>
+    <tr>
+        <td>Background Image with Gradient</td>
+        <td> </td>
+    </tr>
+      <tr>
+        <td><pre><code>
+ShaderMask(
+        shaderCallback: (rect) => LinearGradient(
+          begin: Alignment.bottomCenter,
+          end: Alignment.center,
+          colors: [Colors.white, Colors.transparent],
+        ).createShader(rect),
+        blendMode: BlendMode.darken,
+        child: Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage(imagePath),
+              fit: BoxFit.cover,
+              //colorFilter: ColorFilter.mode(Colors.black54, BlendMode.darken),
+            ),
+          ),
+        ),
+      );
+  }
+  </code></pre> 
+  </td>
+        <td><img src="assets/images/Stack.png" width="200"></td>
+    </tr>
+</table>
+
+    
+
+
 
 
 # AppBar
+
+
+
+
 
 
 
