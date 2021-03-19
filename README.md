@@ -23,19 +23,7 @@ This widget is useful if you want to overlay children in a simple way, for examp
 
 | Stack with Image and gradient        | Are           | 
 | ------------- |:-------------:|
-| col 3 is      | ![@override
-  Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        new MyBackgroundImage(imagePath: "assets/images/image1.jpg",),
-        Scaffold(
-          backgroundColor: Colors.transparent,
-          appBar: new MyAppBar(widget.title, 20.0, color: Colors.transparent,),
-          body:  Container(),         
-        ),
-      ],
-    );
-  }](assets/images/Stack.png) | 
+| col 3 is      | ![Stack](assets/images/Stack.png) | 
  
 | ---
 @override
