@@ -33,7 +33,23 @@ This widget is useful if you want to overlay children in a simple way, for examp
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        new MyBackgroundImage(imagePath: "assets/images/image1.jpg",),
+        ShaderMask(
+        shaderCallback: (rect) => LinearGradient(
+          begin: Alignment.bottomCenter,
+          end: Alignment.center,
+          colors: [Colors.white, Colors.transparent],
+        ).createShader(rect),
+        blendMode: BlendMode.darken,
+        child: Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage(imagePath),
+              fit: BoxFit.cover,
+              //colorFilter: ColorFilter.mode(Colors.black54, BlendMode.darken),
+            ),
+          ),
+        ),
+      ),
         Scaffold(
           backgroundColor: Colors.transparent,
           appBar: new MyAppBar(widget.title, 20.0, color: Colors.transparent,),
