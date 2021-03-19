@@ -45,10 +45,6 @@ This widget is useful if you want to overlay children in a simple way, for examp
   </td>
         <td><img src="assets/images/Stack.png" width="200"></td>
     </tr>
-    <tr>
-        <td>App Background with image/Gradient </td>
-        <td> </td>
-    </tr>
 </table>
 
     
