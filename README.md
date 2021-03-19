@@ -27,7 +27,9 @@ This widget is useful if you want to overlay children in a simple way, for examp
 
 
  
-| <pre><code>
+| 
+
+<pre><code>
  @override
   Widget build(BuildContext context) {
     return Stack(
