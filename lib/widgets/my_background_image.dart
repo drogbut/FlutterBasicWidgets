@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 
 class MyBackgroundImage extends StatelessWidget {
-  //---------- attributes ----------------//
-  final String imageParth;
 
-  //------------ contructor ---------------//
-  const MyBackgroundImage({Key key, @required this.imageParth}) : super(key: key);
+  final String imagePath;
 
-  //----------------- ovoride methode -------//
+  const MyBackgroundImage({Key key, @required this.imagePath}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return ShaderMask(
@@ -20,7 +18,7 @@ class MyBackgroundImage extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage(imageParth),
+            image: AssetImage(imagePath),
             fit: BoxFit.cover,
             //colorFilter: ColorFilter.mode(Colors.black54, BlendMode.darken),
           ),

@@ -7,7 +7,7 @@ class MyAppBar extends AppBar {
 
 
   MyAppBar(String title, double titleSize,
-      {colorAppWidgets: iconColor,
+      {colorAppWidgets: colorIcon,
         double elevation = 4.0,
       Color color}):
       super(

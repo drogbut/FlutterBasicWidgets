@@ -10,7 +10,7 @@ class MyCustomText extends Text {
     double textScaleFactor,
     double fontSize = 20.0,
     fontWeight: FontWeight.normal,
-    color: textColor,
+    color: colorText,
     TextDecoration decoration,
     textAlign: TextAlign.center,
   }) :super(

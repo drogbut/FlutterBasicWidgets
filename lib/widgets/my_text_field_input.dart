@@ -38,9 +38,9 @@ class MyTextInputField extends StatelessWidget {
           width: size.width * 0.8,
           constraints: BoxConstraints.tightFor(height: containerHeight),
           decoration: BoxDecoration(
-            color: iconColor,
+            color: colorIcon,
             borderRadius: BorderRadius.circular(20),
-            border: Border.all(width: 1.0, color: textColor),
+            border: Border.all(width: 1.0, color: colorText),
           ),
           child: Row(
             //crossAxisAlignment: CrossAxisAlignment.start,
@@ -48,7 +48,7 @@ class MyTextInputField extends StatelessWidget {
               Container(
                 child: Icon(
                   leadingIcon,
-                  color: textColor,
+                  color: colorText,
                 ),
                 padding: EdgeInsets.symmetric(horizontal: 10.0),
               ),
@@ -66,14 +66,14 @@ class MyTextInputField extends StatelessWidget {
               Container(
                 child: Icon(
                   actionIcon1,
-                  color: textColor,
+                  color: colorText,
                 ),
                 padding: EdgeInsets.symmetric(horizontal: 10.0),
               ),
               Container(
                   child: Icon(
                     actionIcon2,
-                    color: textColor,
+                    color: colorText,
                   ),
                   padding: EdgeInsets.only(right: 10.0)),
             ],

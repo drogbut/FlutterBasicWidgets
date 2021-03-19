@@ -7,7 +7,7 @@ class MyCardWithChild extends Card {
 
   MyCardWithChild({
     @required Widget child,
-    Color color = iconColor,
+    Color color = colorIcon,
     double elevation = 10.0,
     double left = 10.0,
     double right = 10.0,

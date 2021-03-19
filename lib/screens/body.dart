@@ -73,7 +73,7 @@ class _BodyState extends State<Body> {
                   [
                     MyContainerButton(
                       decoration: MyBackgroundGradient(
-                          primaryColor,
+                          colorPrimary,
                           Colors.purple,
                           radius: 25.0,
                           horizontal: true),
@@ -85,7 +85,7 @@ class _BodyState extends State<Body> {
                           child: MyCustomText(
                             "My Gradient Button",
                             fontSize: 18.0,
-                            color: iconColor,
+                            color: colorIcon,
                           )
                       ),
                     ),
@@ -104,11 +104,11 @@ class _BodyState extends State<Body> {
                             )
                         ),
                         colorBrightness: Brightness.dark,
-                        color: primaryColor,
+                        color: colorPrimary,
                         splashColor: Colors.deepPurpleAccent,
                         highlightColor: Colors.red,
                         onPressed: (){},
-                        child: MyCustomText("My Flat Button", color: iconColor,)
+                        child: MyCustomText("My Flat Button", color: colorIcon,)
                     ),
                     ),
                     MyContainerButton(
@@ -120,7 +120,7 @@ class _BodyState extends State<Body> {
                           highlightElevation: 1.0,
                           color: Colors.purple,
                           onPressed: (){},
-                          child: MyCustomText("My Material Button", fontSize: 18.0, color: iconColor,)
+                          child: MyCustomText("My Material Button", fontSize: 18.0, color: colorIcon,)
                       ),
                     ),
                     MyContainerButton(
@@ -142,7 +142,7 @@ class _BodyState extends State<Body> {
                           ),
                           child: MyCustomText("My Outline Button",
                             fontSize: 18.0,
-                          color: iconColor,),
+                          color: colorIcon,),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.vertical(
                                 top: Radius.circular(20.0),
@@ -153,7 +153,7 @@ class _BodyState extends State<Body> {
                     ),
                     MyContainerButton(
                         decoration: BoxDecoration(
-                            color:primaryColor,
+                            color:colorPrimary,
                         ),
                       child: IconButton(
                           color: Colors.purple,
@@ -166,7 +166,7 @@ class _BodyState extends State<Body> {
                     MyContainerButton(
                      alignment: Alignment.bottomRight,
                         decoration: BoxDecoration(
-                          color:primaryColor,
+                          color:colorPrimary,
                         ),
                         child: FloatingActionButton(
                           onPressed: null,

@@ -12,15 +12,36 @@ Here you will find a quick way to customise the basic flutter widgets to your ta
 - In your terminal, run flutter create . This will create the android and iOS projects for you.
 - Run in your emulator or device.
 
-## This project helped you? Buy me a coffee to support me! [PayPal](https://paypal.me/drogbut)
+### This project helped you? Buy me a coffee to support me! [PayPal](https://paypal.me/drogbut "PayPal")
 
-# Examples
+# App Background
 
-## 
+## Stack
+A widget that positions its children relative to its box.
+This widget is useful if you want to overlay children in a simple way, for example overlapping the appBar, the Drawer and the body on a background image.
+### Try out Stack widget and it's properties directly from [DartPad](https://dartpad.dev/d548285fd710d4c94cb1ff59835b85bd?null_safety=true) 
+| Stack with Image and gradient|  |
+| <code> 
+@override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: [
+        new MyBackgroundImage(imagePath: "assets/images/image1.jpg",),
+        Scaffold(
+          backgroundColor: Colors.transparent,
+          appBar: new MyAppBar(widget.title, 20.0, color: Colors.transparent,),
+          body:  Container(),
+                   
+        ),
+      ],
+    );
+  }
+</code> | ![Stack](assets/images/Stack.png) | 
 
-## 
+# AppBar
 
-## 
+
+
 
 ## 
 

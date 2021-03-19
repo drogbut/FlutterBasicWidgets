@@ -37,17 +37,18 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        new MyBackgroundImage(imageParth: "assets/images/image1.jpg",),
+        new MyBackgroundImage(imagePath: "assets/images/image1.jpg",),
         Scaffold(
           backgroundColor: Colors.transparent,
           appBar: new MyAppBar(widget.title, 20.0, color: Colors.transparent,),
-          body: new Body(),
+          body:  Container(),
+          /*new Body(),
           floatingActionButton: FloatingActionButton(
             onPressed: null,
             child: new Icon(Icons.camera_alt),
             backgroundColor: Colors.purple,
           ),
-           floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+           floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,*/
         ),
       ],
     );

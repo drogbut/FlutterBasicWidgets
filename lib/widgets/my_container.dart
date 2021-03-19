@@ -19,7 +19,7 @@ class MyContainer extends Container {
         width: MediaQuery.of(context).size.width,
         margin: EdgeInsets.all(25.0),
         alignment: Alignment.center,
-        decoration: MyBackgroundGradient(accentColor, primaryColor, radius: 50.0)
+        decoration: MyBackgroundGradient(colorAccent, colorPrimary, radius: 50.0)
       );
 
 }
