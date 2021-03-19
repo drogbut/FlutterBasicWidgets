@@ -23,9 +23,7 @@ This widget is useful if you want to overlay children in a simple way, for examp
 
 | Stack with Image and gradient        |            | 
 | ------------- |:-------------:|
-| 
-```java
-@override
+| @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
@@ -37,9 +35,7 @@ This widget is useful if you want to overlay children in a simple way, for examp
         ),
       ],
     );
-  }     
-  ```
-|<img src="assets/images/Stack.png" width="48">| 
+  }     | <img src="assets/images/Stack.png" width="48"> | 
  
 
 
