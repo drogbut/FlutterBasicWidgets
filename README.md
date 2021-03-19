@@ -26,9 +26,7 @@ This widget is useful if you want to overlay children in a simple way, for examp
 | @override <br>  Widget build(BuildContext context) {<br>  return Stack(<br> children: [<br>new MyBackgroundImage(imagePath: "assets/images/image1.jpg",)<br>  Scaffold(<br> backgroundColor: Colors.transparent,<br>appBar: new MyAppBar(widget.title, 20.0, color: Colors.transparent,),<br>body:  Container(),<br>),<br>],<br>);<br>} | <img src="assets/images/Stack.png" width="200"> | 
 
 
- 
-| 
-
+     
 <pre><code>
  @override
   Widget build(BuildContext context) {
@@ -43,9 +41,7 @@ This widget is useful if you want to overlay children in a simple way, for examp
       ],
     );
   }
-</code></pre>
-
-|<img src="assets/images/Stack.png" width="200">|
+</code></pre>  <img src="assets/images/Stack.png" width="200">
 
 
 
