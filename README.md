@@ -50,8 +50,6 @@ This widget is useful if you want to overlay children in a simple way, for examp
     </tr>
 </table>
 
-This is another regular paragraph.
-
 
 
 
