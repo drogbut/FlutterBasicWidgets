@@ -48,12 +48,30 @@ This is a regular paragraph.
 
 <table>
     <tr>
-        <td>Foo</td>
-        <td>Foo</td>
+        <td>Stack with Image and gradient</td>
+        <td> </td>
     </tr>
       <tr>
-        <td>Foo</td>
-        <td>Foo</td>
+        <td>
+             
+             <pre><code>
+ @override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: [
+        new MyBackgroundImage(imagePath: "assets/images/image1.jpg",),
+        Scaffold(
+          backgroundColor: Colors.transparent,
+          appBar: new MyAppBar(widget.title, 20.0, color: Colors.transparent,),
+          body:  Container(),         
+        ),
+      ],
+    );
+  }
+  </code></pre> 
+  
+  </td>
+        <td><img src="assets/images/Stack.png" width="200"></td>
     </tr>
 </table>
 
