@@ -23,7 +23,7 @@ This widget is useful if you want to overlay children in a simple way, for examp
 
 | Stack with Image and gradient        | Are           | 
 | ------------- |:-------------:|
-| col 3 is      | ![Stack](assets/images/Stack.png) | 
+| col 3 is      |<img src="assets/images/Stack.png" width="48">| 
  
 | ---
 @override
