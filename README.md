@@ -45,9 +45,6 @@ This widget is useful if you want to overlay children in a simple way, for examp
   </td>
         <td><img src="assets/images/Stack.png" width="200"></td>
     </tr>
-</table>
-
-<table>
     <tr>
         <td>Stack with Image and gradient</td>
         <td> </td>
@@ -72,6 +69,8 @@ This widget is useful if you want to overlay children in a simple way, for examp
         <td><img src="assets/images/Stack.png" width="200"></td>
     </tr>
 </table>
+
+    
 
 
 
