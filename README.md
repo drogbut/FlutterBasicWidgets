@@ -44,6 +44,21 @@ This widget is useful if you want to overlay children in a simple way, for examp
   | <img src="assets/images/Stack.png" width="200"> | 
 
 
+This is a regular paragraph.
+
+<table>
+    <tr>
+        <td>Foo</td>
+        <td>Foo</td>
+    </tr>
+      <tr>
+        <td>Foo</td>
+        <td>Foo</td>
+    </tr>
+</table>
+
+This is another regular paragraph.
+
 
 
 
