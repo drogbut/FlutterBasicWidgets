@@ -23,8 +23,7 @@ This widget is useful if you want to overlay children in a simple way, for examp
 
 | Stack with Image and gradient        |            | 
 | ------------- |:-------------:|
-| 
-```
+| ```java
 @override
   Widget build(BuildContext context) {
     return Stack(
