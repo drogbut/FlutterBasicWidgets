@@ -28,8 +28,7 @@ This widget is useful if you want to overlay children in a simple way, for examp
         <td> </td>
     </tr>
       <tr>
-        <td>        
-<pre><code>
+        <td><pre><code>
  @override
   Widget build(BuildContext context) {
     return Stack(
@@ -44,7 +43,6 @@ This widget is useful if you want to overlay children in a simple way, for examp
     );
   }
   </code></pre> 
-  
   </td>
         <td><img src="assets/images/Stack.png" width="200"></td>
     </tr>
