@@ -35,7 +35,7 @@ This widget is useful if you want to overlay children in a simple way, for examp
         ),
       ],
     );
-  }     | <img src="assets/images/Stack.png" width="100"> | 
+  }     | <img src="assets/images/Stack.png" width="200"> | 
  
 
 
