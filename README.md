@@ -59,15 +59,7 @@ textfiled 1
     </tr>
       <tr>
         <td><pre><code>
-class MyBackgroundImage extends StatelessWidget {
-  final String imagePath;
-
-  const MyBackgroundImage({Key key, @required this.imagePath})
-      : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return ShaderMask(
+ShaderMask(
         shaderCallback: (rect) => LinearGradient(
           begin: Alignment.bottomCenter,
           end: Alignment.center,
@@ -85,7 +77,6 @@ class MyBackgroundImage extends StatelessWidget {
         ),
       );
   }
-}
   </code></pre> 
   </td>
         <td><img src="assets/images/Stack.png" width="200"></td>
