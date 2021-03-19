@@ -21,7 +21,7 @@ A widget that positions its children relative to its box.
 This widget is useful if you want to overlay children in a simple way, for example overlapping the appBar, the Drawer and the body on a background image.
 ### Try out Stack widget and it's properties directly from [DartPad](https://dartpad.dev/d548285fd710d4c94cb1ff59835b85bd?null_safety=true) 
 | Stack with Image and gradient|  |
-| <code> 
+| '' 
 @override
   Widget build(BuildContext context) {
     return Stack(
@@ -36,7 +36,7 @@ This widget is useful if you want to overlay children in a simple way, for examp
       ],
     );
   }
-</code> | ![Stack](assets/images/Stack.png) | 
+'' | ![Stack](assets/images/Stack.png) | 
 
 # AppBar
 
