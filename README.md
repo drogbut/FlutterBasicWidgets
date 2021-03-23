@@ -19,7 +19,7 @@ If you want to overlay children relatively to a parent, use the Stack widget. In
 <table>
     <tr>
         <td>How to overlay children relatively on an image ?</td>
-        <td><a href="https://www.youtube.com/watch?v=liEGSeD3Zt8">watch more on youtube</a></td>
+        <td><a href="https://www.youtube.com/watch?v=liEGSeD3Zt8">Learn more about Stack</a></td>
     </tr>
       <tr>
         <td><pre><code>
