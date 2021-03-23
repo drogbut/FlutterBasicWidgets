@@ -12,7 +12,7 @@ Here you will find a quick way to customise the basic flutter widgets to your ta
 - In your terminal, run flutter create . This will create the android and iOS projects for you.
 - Run in your emulator or device.
 
-# App Background
+# 1. App Background
 
 ## Stack - How to overlay children relatively on an image ?
 If you want to overlay children relatively to a parent, use the Stack widget. In this example, Stack is used to order the appBar and the body relatively to a parent image in background.
@@ -78,9 +78,9 @@ ShaderMask(
     </tr>
 </table>
 
-# AppBar
+# 2. AppBar
 
-# App Body
+# 3. App Body
 
 ### Learn more on Flutter    
 [Official Flutter documentation](https://flutter.dev/docs) <br>
