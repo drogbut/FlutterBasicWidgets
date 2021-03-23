@@ -20,7 +20,7 @@ If you want to overlay children relatively to a parent, use the Stack widget. In
 <table>
     <tr>
         <td>App Background with image/Gradient</td>
-        <td> Try out from [DartPad](https://dartpad.dev/d548285fd710d4c94cb1ff59835b85bd?null_safety=true)</td>
+        <td>Try out from [DartPad](https://dartpad.dartlang.org/flutter) </td>
     </tr>
       <tr>
         <td><pre><code>
