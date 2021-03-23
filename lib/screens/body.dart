@@ -30,7 +30,7 @@ class _BodyState extends State<Body> {
               MyContainer(
                   context,
                   [
-                    MyCustomText("Text And TextField",
+                    /*MyCustomText("Text And TextField",
                       textScaleFactor: 1.2,
                       fontWeight: FontWeight.bold,
 
@@ -65,10 +65,10 @@ class _BodyState extends State<Body> {
                       inputAction: TextInputAction.done,
                       maxLines: 10,
                       containerHeight: 200.0,
-                    ),
+                    ),*/
                   ]
               ),
-              MyContainer(
+              /*MyContainer(
                   context,
                   [
                     MyContainerButton(
@@ -188,7 +188,7 @@ class _BodyState extends State<Body> {
                       width: MediaQuery.of(context).size.width/1.5,
                       fit: BoxFit.cover,)),
                     ]
-              ),
+              ),*/
               
               new RaisedButton(
                   color: Colors.teal,

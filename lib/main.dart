@@ -41,9 +41,8 @@ class _MyHomePageState extends State<MyHomePage> {
         Scaffold(
           backgroundColor: Colors.transparent,
           appBar: new MyAppBar(widget.title, 20.0, color: Colors.transparent,),
-          body:  Container(),
-          /*new Body(),
-          floatingActionButton: FloatingActionButton(
+          body: new Body(),
+          /*floatingActionButton: FloatingActionButton(
             onPressed: null,
             child: new Icon(Icons.camera_alt),
             backgroundColor: Colors.purple,

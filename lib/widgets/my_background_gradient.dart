@@ -7,9 +7,10 @@ class MyBackgroundGradient extends BoxDecoration {
   static final FractionalOffset endHorizontal = FractionalOffset(1.0, 0.0);
   static final FractionalOffset endVertical = FractionalOffset(0.0, 1.0);
 
-  MyBackgroundGradient(Color startColor, Color endColor,
-      {bool horizontal: false, double radius: 0.0})
-      : super(
+  MyBackgroundGradient(Color startColor, Color endColor, {
+        bool horizontal: false,
+        double radius: 0.0
+      }) : super(
             gradient: LinearGradient(
               colors: [startColor, endColor],
               begin: begin,

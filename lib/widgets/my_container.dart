@@ -15,7 +15,7 @@ class MyContainer extends Container {
           mainAxisAlignment: mainAxisAlignment,
           children: child,
         ),
-        height: MediaQuery.of(context).size.height,
+        height: MediaQuery.of(context).size.height*4/5,
         width: MediaQuery.of(context).size.width,
         margin: EdgeInsets.all(25.0),
         alignment: Alignment.center,
