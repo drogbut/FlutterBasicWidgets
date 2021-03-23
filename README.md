@@ -12,8 +12,6 @@ Here you will find a quick way to customise the basic flutter widgets to your ta
 - In your terminal, run flutter create . This will create the android and iOS projects for you.
 - Run in your emulator or device.
 
-### This project helped you? Buy me a coffee to support me! [PayPal](https://paypal.me/drogbut "PayPal")
-
 # App Background
 
 ## Stack
@@ -83,16 +81,19 @@ ShaderMask(
     </tr>
 </table>
 
-    
+### Learn more on Flutter    
+[Official Flutter documentation](https://flutter.dev/docs)
+[Flutter widget list](https://flutter.dev/docs/development/ui/widgets)
+[Flutter youtube channel](https://www.youtube.com/channel/UCwXdFgeE9KYzlDdR7TG9cMw)
 
+### Created & maintained by   
+Idriss Tchio ([LinkedIn](https://www.linkedin.com/in/idriss-tchio/))
 
+### Contribution Guidelines    
+This project is a fully open source project, and contributions are welcome.
 
+### Support
+This project helped you? Buy me a coffee to support me! [PayPal](https://paypal.me/drogbut "PayPal")
 
-# AppBar
-
-
-
-
-
-
-
+### Licence
+*Copyright 2021 Idriss Tchio*
