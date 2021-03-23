@@ -12,19 +12,14 @@ Here you will find a quick way to customise the basic flutter widgets to your ta
 - In your terminal, run flutter create . This will create the android and iOS projects for you.
 - Run in your emulator or device.
 
-### This project helped you? Buy me a coffee to support me! [PayPal](https://paypal.me/drogbut "PayPal")
+# 1. App Background
 
-# App Background
-
-## Stack
-A widget that positions its children relative to its box.
-This widget is useful if you want to overlay children in a simple way, for example overlapping the appBar, the Drawer and the body on a background image.
-### Try out Stack widget and it's properties directly from [DartPad](https://dartpad.dev/d548285fd710d4c94cb1ff59835b85bd?null_safety=true) 
-
+## Stack - How to overlay children relatively on an image ?
+If you want to overlay children relatively to a parent, use the Stack widget. In this example, Stack is used to order the appBar and the body relatively to a parent image in background.
 <table>
     <tr>
-        <td>App Background with image/Gradient</td>
-        <td> </td>
+        <td>How to overlay children relatively on an image ?</td>
+        <td><a href="https://www.youtube.com/watch?v=liEGSeD3Zt8">Learn more about Stack</a></td>
     </tr>
       <tr>
         <td><pre><code>
@@ -32,7 +27,7 @@ This widget is useful if you want to overlay children in a simple way, for examp
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        new MyBackgroundImage(imagePath: "assets/images/image1.jpg",),
+        Image.network('https://picsum.photos/250?image=9'),
         Scaffold(
           backgroundColor: Colors.transparent,
           appBar: new MyAppBar(widget.title, 20.0, color: Colors.transparent,),
@@ -83,18 +78,23 @@ ShaderMask(
     </tr>
 </table>
 
-    
+# 2. AppBar
 
+# 3. App Body
 
+### Learn more on Flutter    
+[Official Flutter documentation](https://flutter.dev/docs) <br>
+[Flutter widget list](https://flutter.dev/docs/development/ui/widgets) <br>
+[Flutter youtube channel](https://www.youtube.com/channel/UCwXdFgeE9KYzlDdR7TG9cMw)
 
+### Created & maintained by   
+Idriss Tchio ([LinkedIn](https://www.linkedin.com/in/idriss-tchio/))
+
+### Contribution Guidelines    
+This project is a fully open source project, and contributions are welcome.
+
+### Support
+This project helped you? Buy me a coffee to support me! [PayPal](https://paypal.me/drogbut "PayPal")
 
 ### Licence
-
- 
-
-
-
-
-
-
-
+*Copyright 2021 Idriss Tchio*
