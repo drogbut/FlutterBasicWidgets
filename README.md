@@ -82,9 +82,9 @@ ShaderMask(
 </table>
 
 ### Learn more on Flutter    
-<p>[Official Flutter documentation](https://flutter.dev/docs) <br>
+<p> [Official Flutter documentation](https://flutter.dev/docs) <br>
 [Flutter widget list](https://flutter.dev/docs/development/ui/widgets) <br>
-[Flutter youtube channel](https://www.youtube.com/channel/UCwXdFgeE9KYzlDdR7TG9cMw)</p>
+[Flutter youtube channel](https://www.youtube.com/channel/UCwXdFgeE9KYzlDdR7TG9cMw) </p>
 
 ### Created & maintained by   
 Idriss Tchio ([LinkedIn](https://www.linkedin.com/in/idriss-tchio/))
