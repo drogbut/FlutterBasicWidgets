@@ -16,11 +16,10 @@ Here you will find a quick way to customise the basic flutter widgets to your ta
 
 ## Stack
 If you want to overlay children relatively to a parent, use the Stack widget. In this example, Stack is used to order the appBar and the body relatively to a parent image in background.
-
 <table>
     <tr>
-        <td>App Background with image/Gradient</td>
-        <td>Try out from [DartPad](https://dartpad.dartlang.org/flutter) </td>
+        <td>How to overlay children relatively on an image ?</td>
+        <td><a href="https://dartpad.dartlang.org/flutter">Try out from DartPad</a></td>
     </tr>
       <tr>
         <td><pre><code>
