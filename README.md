@@ -80,6 +80,57 @@ Container(
 </table>
 
 # B. AppBar
+## 2. My custom AppBar class
+Try AppBar examples directly from [DartPad](https://dartpad.dartlang.org/flutter).
+    <tr>
+        <td>MyAppBar extends AppBar</td>
+        <td><a href="https://www.youtube.com/watch?v=mSc7qFzxHDw">Also SilverAppBar</a></td>
+    </tr>
+      <tr>
+        <td><pre><code>
+class MyAppBar extends AppBar {
+  MyAppBar(String title, double titleSize,
+      {colorAppWidgets: colorIcon, double elevation = 4.0, Color color})
+      : super(
+            title: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                IconButton(
+                  icon: Icon(
+                    Icons.keyboard_backspace,
+                    color: colorAppWidgets,
+                  ),
+                  onPressed: () {},
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 16.0),
+                  child: Text(title,
+                      style: TextStyle(
+                          fontSize: titleSize, color: colorAppWidgets)),
+                ),
+              ],
+            ),
+            backgroundColor: color,
+            elevation: elevation,
+            iconTheme: IconThemeData(color: colorAppWidgets),
+            actions: [
+              IconButton(
+                icon: Icon(Icons.search),
+                onPressed: () {},
+              ),
+              IconButton(
+                icon: Icon(Icons.share),
+                onPressed: () {},
+              ),
+            ]);
+}
+  </code></pre> 
+  </td>
+        <td><img src="assets/images/Stack.png" width="200"></td>
+    </tr>
+</table>
+
 
 # C. App Body
 
