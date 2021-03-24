@@ -16,9 +16,9 @@ Here you will find a quick way to customise the basic flutter widgets to your ta
 
 ## 1. Stack 
 If you want to overlay children relatively to a parent, use the Stack widget. In this example, Stack is used to order the appBar and the body relatively to a parent image in background.
-<table style="width:800px">
+<table>
     <tr>
-        <td style="width:500px">How to overlay children relatively on an image ?</td>
+        <td>How to overlay children relatively on an image ?</td>
         <td><a href="https://www.youtube.com/watch?v=liEGSeD3Zt8">Learn more about Stack</a></td>
     </tr>
       <tr>
@@ -29,7 +29,8 @@ If you want to overlay children relatively to a parent, use the Stack widget. In
       children: [
         Image.network('https://picsum.photos/250?image=9'),
         Scaffold(backgroundColor: Colors.transparent,
-          appBar: new MyAppBar( widget.title, 20.0, color: Colors.transparent,),
+          appBar: new MyAppBar( widget.title, 20.0, color: Colors.transparent
+          ),
           body:  Container(),         
         ),
       ],
