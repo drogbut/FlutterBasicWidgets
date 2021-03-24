@@ -48,7 +48,7 @@ If you want to overlay children relatively to a parent, use the Stack widget. In
 By considering colour theory, gradients make an application more visually interesting than a conventional design. To apply gradients to a Flutter application, you will use [BoxDecoration](https://api.flutter.dev/flutter/painting/BoxDecoration-class.html) and [LinearGradient](https://api.flutter.dev/flutter/painting/LinearGradient-class.html)
 <table style="width:800px">
     <tr>
-        <td>Background Image with Gradient</td>
+        <td>Gradient Background color</td>
         <td><a href="https://www.youtube.com/watch?v=c1xLMaTUWCY">Learn more about Container</a></td>
     </tr>
       <tr>
