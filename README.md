@@ -23,7 +23,7 @@ If you want to overlay children relatively to a parent, use the Stack widget. In
     </tr>
       <tr>
         <td><pre><code>
-//*********************** buid-method **********************//
+//*********************** buid-method ****************************//
 @override
   Widget build(BuildContext context) {
     return Stack(
