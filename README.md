@@ -23,7 +23,7 @@ If you want to overlay children relatively to a parent, use the Stack widget. In
     </tr>
       <tr>
         <td><pre><code>
-//*********************** buid-method ****************************//
+//**********************Eexemple code****************************//
 @override
   Widget build(BuildContext context) {
     return Stack(
@@ -54,7 +54,7 @@ By considering colour theory, gradients make an application more visually intere
     </tr>
       <tr>
         <td><pre><code>
-//*********************** buid-method ****************************//
+//***********************Eexemple code****************************//
 Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.all(Radius.circular(48.0)),
@@ -91,7 +91,7 @@ Try AppBar examples directly from [DartPad](https://dartpad.dartlang.org/flutter
     </tr>
       <tr>
         <td><pre><code>
-//*********************** buid-method ****************************//
+//***********************Eexemple code****************************//
 class MyAppBar extends AppBar {
   MyAppBar(String title, double titleSize, {
   colorAppWidgets: colorIcon, 
@@ -148,7 +148,7 @@ Try out Text widget and it's properties directly from [DartPad](https://dartpad.
     </tr>
       <tr>
         <td><pre><code>
-//*********************** buid-method ****************************//
+//***********************Eexemple code****************************//
 class MyCustomText extends Text {
   MyCustomText(String data, {
     double textScaleFactor = 1.2,
@@ -190,7 +190,7 @@ Try out TextField widget and it's properties directly from [DartPad](https://dar
     </tr>
       <tr>
         <td><pre><code>
-//*********************** buid-method ****************************//
+//***********************Eexemple code****************************//
 class MyTextInputField extends StatelessWidget {
   final IconData leadingIcon, actionIcon1, actionIcon2;
   final String hint;
