@@ -15,11 +15,24 @@ class MyContainer extends Container {
           mainAxisAlignment: mainAxisAlignment,
           children: child,
         ),
-        height: MediaQuery.of(context).size.height*4/5,
+        height: MediaQuery.of(context).size.height*5/6,
         width: MediaQuery.of(context).size.width,
         margin: EdgeInsets.all(25.0),
         alignment: Alignment.center,
-        decoration: MyBackgroundGradient(colorAccent, colorPrimary, radius: 50.0)
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.all(Radius.circular(48.0)),
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              tileMode: TileMode.repeated,
+              colors: [
+                colorPrimary,
+                colorAccent,
+              ],
+            )
+        ),
+
+        /*MyBackgroundGradient(colorAccent, colorPrimary, radius: 50.0)*/
       );
 
 }

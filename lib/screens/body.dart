@@ -30,6 +30,14 @@ class _BodyState extends State<Body> {
               MyContainer(
                   context,
                   [
+                    Text(
+                      'Hello Gradient!',
+                      style: TextStyle(
+                        fontSize: 48.0,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                    ),
                     /*MyCustomText("Text And TextField",
                       textScaleFactor: 1.2,
                       fontWeight: FontWeight.bold,
