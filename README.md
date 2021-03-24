@@ -54,24 +54,29 @@ textfiled 1
     </tr>
       <tr>
         <td><pre><code>
-ShaderMask(
-        shaderCallback: (rect) => LinearGradient(
-          begin: Alignment.bottomCenter,
-          end: Alignment.center,
-          colors: [Colors.white, Colors.transparent],
-        ).createShader(rect),
-        blendMode: BlendMode.darken,
-        child: Container(
+Container(
           decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage(imagePath),
-              fit: BoxFit.cover,
-              //colorFilter: ColorFilter.mode(Colors.black54, BlendMode.darken),
+            borderRadius: BorderRadius.all(Radius.circular(48.0)),
+            gradient: LinearGradient(
+              begin: Alignment.topRight,
+              end: Alignment.bottomLeft,
+              colors: [
+                Colors.green,
+                Colors.grenn[900],
+              ],
+            )
+          ),
+          child: Center(
+            child: Text(
+              'Hello Gradient!',
+              style: TextStyle(
+                fontSize: 48.0,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
             ),
           ),
         ),
-      );
-  }
   </code></pre> 
   </td>
         <td><img src="assets/images/Stack.png" width="200"></td>
