@@ -38,7 +38,7 @@ If you want to overlay children relatively to a parent, use the Stack widget. In
   }
   </code></pre> 
   </td>
-        <td><img src="assets/images/my_stack.png" width="200"></td>
+        <td><img src="assets/images/my_stack.png" width="300"></td>
     </tr>
 </table>
 
