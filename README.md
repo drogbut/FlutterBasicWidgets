@@ -144,7 +144,6 @@ Try out Text widget and it's properties directly from [DartPad](https://dartpad.
       <tr>
         <td><pre><code>
 class MyCustomText extends Text {
-
   MyCustomText(String data, {
     double textScaleFactor = 1.2,
     double fontSize = 11.0,
