@@ -79,7 +79,7 @@ Container(
         ),
   </code></pre> 
   </td>
-        <td><img src="assets/images/Stack.png" width="200"></td>
+        <td><img src="assets/images/my_gradient_container.png" width="200"></td>
     </tr>
 </table>
 
