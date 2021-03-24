@@ -12,9 +12,9 @@ Here you will find a quick way to customise the basic flutter widgets to your ta
 - In your terminal, run flutter create . This will create the android and iOS projects for you.
 - Run in your emulator or device.
 
-# 1. App Background
+# A. App Background
 
-## Stack - How to overlay children relatively on an image ?
+## 1. Stack - How to overlay children relatively on an image ?
 If you want to overlay children relatively to a parent, use the Stack widget. In this example, Stack is used to order the appBar and the body relatively to a parent image in background.
 <table style="width:800px">
     <tr>
@@ -43,14 +43,13 @@ If you want to overlay children relatively to a parent, use the Stack widget. In
     </tr>
 </table>
 
-## BoxDecoration - How To Use Gradients in Flutter with BoxDecoration
-By considering colour theory, gradients make an application more visually interesting than a conventional design. To apply gradients to a Flutter application, you will use [BoxDecoration](https://api.flutter.dev/flutter/painting/BoxDecoration-class.html) and [LinearGradient](https://api.flutter.dev/flutter/painting/LinearGradient-class.html)
-### Try out ShaderMask widget and it's properties directly from [DartPad](https://dartpad.dev/d548285fd710d4c94cb1ff59835b85bd?null_safety=true) 
 
+## 2. BoxDecoration - How To Use Gradients in Flutter with BoxDecoration
+By considering colour theory, gradients make an application more visually interesting than a conventional design. To apply gradients to a Flutter application, you will use [BoxDecoration](https://api.flutter.dev/flutter/painting/BoxDecoration-class.html) and [LinearGradient](https://api.flutter.dev/flutter/painting/LinearGradient-class.html)
 <table style="width:800px">
     <tr>
         <td>Background Image with Gradient</td>
-        <td> </td>
+        <td><a href="https://www.youtube.com/watch?v=c1xLMaTUWCY">Learn more about Stack</a></td>
     </tr>
       <tr>
         <td><pre><code>
@@ -80,9 +79,9 @@ Container(
     </tr>
 </table>
 
-# 2. AppBar
+# B. AppBar
 
-# 3. App Body
+# C. App Body
 
 ### Learn more on Flutter    
 [Official Flutter documentation](https://flutter.dev/docs) <br>
