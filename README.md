@@ -16,7 +16,7 @@ Here you will find a quick way to customise the basic flutter widgets to your ta
 
 ## Stack - How to overlay children relatively on an image ?
 If you want to overlay children relatively to a parent, use the Stack widget. In this example, Stack is used to order the appBar and the body relatively to a parent image in background.
-<table style="width:600px">
+<table style="width:700px">
     <tr>
         <td>How to overlay children relatively on an image ?</td>
         <td><a href="https://www.youtube.com/watch?v=liEGSeD3Zt8">Learn more about Stack</a></td>
@@ -47,7 +47,7 @@ If you want to overlay children relatively to a parent, use the Stack widget. In
 By considering colour theory, gradients make an application more visually interesting than a conventional design. To apply gradients to a Flutter application, you will use [BoxDecoration](https://api.flutter.dev/flutter/painting/BoxDecoration-class.html) and [LinearGradient](https://api.flutter.dev/flutter/painting/LinearGradient-class.html)
 ### Try out ShaderMask widget and it's properties directly from [DartPad](https://dartpad.dev/d548285fd710d4c94cb1ff59835b85bd?null_safety=true) 
 
-<table style="width:600px">
+<table style="width:700px">
     <tr>
         <td>Background Image with Gradient</td>
         <td> </td>
