@@ -42,9 +42,8 @@ If you want to overlay children relatively to a parent, use the Stack widget. In
     </tr>
 </table>
 
-## ShaderMask
-textfiled 1
-textfiled 1
+## BoxDecoration - How To Use Gradients in Flutter with BoxDecoration
+By considering colour theory, gradients make an application more visually interesting than a conventional design. To apply gradients to a Flutter application, you will use [BoxDecoration](https://api.flutter.dev/flutter/painting/BoxDecoration-class.html) and [LinearGradient](https://api.flutter.dev/flutter/painting/LinearGradient-class.html)
 ### Try out ShaderMask widget and it's properties directly from [DartPad](https://dartpad.dev/d548285fd710d4c94cb1ff59835b85bd?null_safety=true) 
 
 <table>
