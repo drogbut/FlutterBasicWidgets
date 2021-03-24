@@ -29,8 +29,8 @@ If you want to overlay children relatively to a parent, use the Stack widget. In
       children: [
         Image.network('https://picsum.photos/250?image=9'),
         Scaffold(backgroundColor: Colors.transparent,
-          appBar: new MyAppBar( widget.title, 20.0, color: Colors.transparent
-          ),
+          appBar: 
+            new MyAppBar( widget.title, 20.0, color: Colors.transparen),
           body:  Container(),         
         ),
       ],
