@@ -30,15 +30,7 @@ class _BodyState extends State<Body> {
               MyContainer(
                   context,
                   [
-                    Text(
-                      'Hello Gradient!',
-                      style: TextStyle(
-                        fontSize: 48.0,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                      ),
-                    ),
-                    /*MyCustomText("Text And TextField",
+                    MyCustomText("Text And TextField",
                       textScaleFactor: 1.2,
                       fontWeight: FontWeight.bold,
 
@@ -73,18 +65,13 @@ class _BodyState extends State<Body> {
                       inputAction: TextInputAction.done,
                       maxLines: 10,
                       containerHeight: 200.0,
-                    ),*/
+                    ),
                   ]
               ),
-              /*MyContainer(
+              MyContainer(
                   context,
                   [
                     MyContainerButton(
-                      decoration: MyBackgroundGradient(
-                          colorPrimary,
-                          Colors.purple,
-                          radius: 25.0,
-                          horizontal: true),
                       shapeBorder: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(25.0),
                       ),
@@ -196,7 +183,7 @@ class _BodyState extends State<Body> {
                       width: MediaQuery.of(context).size.width/1.5,
                       fit: BoxFit.cover,)),
                     ]
-              ),*/
+              ),
               
               new RaisedButton(
                   color: Colors.teal,

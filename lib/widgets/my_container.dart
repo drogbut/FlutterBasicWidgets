@@ -1,7 +1,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:mise_en_page/my_constants.dart';
-import 'package:mise_en_page/widgets/my_background_gradient.dart';
 
 
 class MyContainer extends Container {
@@ -31,8 +30,6 @@ class MyContainer extends Container {
               ],
             )
         ),
-
-        /*MyBackgroundGradient(colorAccent, colorPrimary, radius: 50.0)*/
       );
 
 }
