@@ -134,6 +134,46 @@ class MyAppBar extends AppBar {
 
 
 # C. App Body
+## 1. Text
+Try out Text widget and it's properties directly from [DartPad](https://dartpad.dartlang.org/flutter)
+<table style="width:800px">
+    <tr>
+        <td>Play with Text properties and styles</td>
+        <td><a href="https://www.youtube.com/watch?v=rykDVh-QFfw">Learn more with RichText</a></td>
+    </tr>
+      <tr>
+        <td><pre><code>
+class MyCustomText extends Text {
+
+  MyCustomText(String data, {
+    double textScaleFactor = 1.2,
+    double fontSize = 11.0,
+    double letterSpacing = 2.0,
+    double wordSpacing = 40.0,
+    fontWeight: FontWeight.normal,
+    color: colorText,
+    TextDecoration decoration,
+    textAlign: TextAlign.center,
+  }) :super(
+        data,
+        textScaleFactor: textScaleFactor,
+        textAlign: textAlign,
+        style: TextStyle(
+            color: color,
+            fontSize: fontSize,
+            fontWeight: fontWeight,
+            letterSpacing: letterSpacing,
+            wordSpacing: wordSpacing,
+            decoration: decoration,
+            decorationStyle: TextDecorationStyle.wavy
+        ),
+      );
+}
+  </code></pre> 
+  </td>
+        <td><img src="assets/images/my_standard_text.png" width="200"></td>
+    </tr>
+</table>
 
 ### Learn more on Flutter    
 [Official Flutter documentation](https://flutter.dev/docs) <br>
