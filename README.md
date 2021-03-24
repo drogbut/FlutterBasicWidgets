@@ -19,7 +19,7 @@ If you want to overlay children relatively to a parent, use the Stack widget. In
 <table style="width:800px">
     <tr>
         <td>How to overlay children relatively on an image ?</td>
-        <td><a href="https://www.youtube.com/watch?v=liEGSeD3Zt8">Learn more about Container</a></td>
+        <td><a href="https://www.youtube.com/watch?v=liEGSeD3Zt8">Learn more about Stack</a></td>
     </tr>
       <tr>
         <td><pre><code>
@@ -49,7 +49,7 @@ By considering colour theory, gradients make an application more visually intere
 <table style="width:800px">
     <tr>
         <td>Background Image with Gradient</td>
-        <td><a href="https://www.youtube.com/watch?v=c1xLMaTUWCY">Learn more about Stack</a></td>
+        <td><a href="https://www.youtube.com/watch?v=c1xLMaTUWCY">Learn more about Container</a></td>
     </tr>
       <tr>
         <td><pre><code>
