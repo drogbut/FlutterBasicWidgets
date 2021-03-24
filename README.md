@@ -14,7 +14,7 @@ Here you will find a quick way to customise the basic flutter widgets to your ta
 
 # A. App Background
 
-## 1. Stack - How to overlay children relatively on an image ?
+## 1. Stack 
 If you want to overlay children relatively to a parent, use the Stack widget. In this example, Stack is used to order the appBar and the body relatively to a parent image in background.
 <table style="width:800px">
     <tr>
@@ -44,11 +44,11 @@ If you want to overlay children relatively to a parent, use the Stack widget. In
 </table>
 
 
-## 2. BoxDecoration - How To Use Gradients in Flutter with BoxDecoration
+## 2. BoxDecoration
 By considering colour theory, gradients make an application more visually interesting than a conventional design. To apply gradients to a Flutter application, you will use [BoxDecoration](https://api.flutter.dev/flutter/painting/BoxDecoration-class.html) and [LinearGradient](https://api.flutter.dev/flutter/painting/LinearGradient-class.html)
 <table style="width:800px">
     <tr>
-        <td>Gradient Background color</td>
+        <td>How To Use Gradients in Flutter with BoxDecoration</td>
         <td><a href="https://www.youtube.com/watch?v=c1xLMaTUWCY">Learn more about Container</a></td>
     </tr>
       <tr>
