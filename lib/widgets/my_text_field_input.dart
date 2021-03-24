@@ -60,8 +60,8 @@ class MyTextInputField extends StatelessWidget {
                   obscureText: obscureText,
                   strutStyle: StrutStyle.disabled,
                   decoration: InputDecoration(
-                      hintText: hint,
-                      /*hintStyle: myTextStyle*/
+                    hintText: hint,
+                    /*hintStyle: myTextStyle*/
                   ),
                 ),
               ),
@@ -79,7 +79,8 @@ class MyTextInputField extends StatelessWidget {
                   ),
                   padding: EdgeInsets.only(right: 10.0)),
             ],
-          )),
+          )
+      ),
     );
   }
 }

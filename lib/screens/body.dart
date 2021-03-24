@@ -30,16 +30,18 @@ class _BodyState extends State<Body> {
               MyContainer(
                   context,
                   [
-                    MyCustomText("My standard Text",
+                    /*MyCustomText("My standard Text",
                       textScaleFactor: 1.2,
                       fontSize: 24.0,
                       color: colorIcon,
                       fontWeight: FontWeight.bold,
-
                     ),
-                   /* MyCustomText("My underline Text",
+                    MyCustomText("My underline Text",
+                      color: colorIcon,
                       decoration: TextDecoration.underline,
-                    ),
+                      fontSize: 24.0,
+                      textDecorationStyle: TextDecorationStyle.wavy,
+                    ),*/
                     MyTextInputField(
                       leadingIcon: Icons.person,
                       actionIcon1: Icons.add,
@@ -67,7 +69,7 @@ class _BodyState extends State<Body> {
                       inputAction: TextInputAction.done,
                       maxLines: 10,
                       containerHeight: 200.0,
-                    ),*/
+                    ),
                   ]
               ),
               /*MyContainer(

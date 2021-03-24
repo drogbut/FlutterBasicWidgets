@@ -149,9 +149,10 @@ class MyCustomText extends Text {
     double fontSize = 11.0,
     double letterSpacing = 2.0,
     double wordSpacing = 40.0,
+    decoration:  TextDecoration.none,
     fontWeight: FontWeight.normal,
     color: colorText,
-    TextDecoration decoration,
+    textDecorationStyle: TextDecorationStyle,
     textAlign: TextAlign.center,
   }) :super(
         data,
@@ -164,13 +165,79 @@ class MyCustomText extends Text {
             letterSpacing: letterSpacing,
             wordSpacing: wordSpacing,
             decoration: decoration,
-            decorationStyle: TextDecorationStyle.wavy
+            decorationStyle: textDecorationStyle
         ),
       );
 }
   </code></pre> 
   </td>
         <td><img src="assets/images/my_standard_text.png" width="200"></td>
+    </tr>
+</table>
+
+## 2. My custom TextField
+Try out TextField widget and it's properties directly from [DartPad](https://dartpad.dartlang.org/flutter)
+<table style="width:800px">
+    <tr>
+        <td>Play with Text properties and styles</td>
+        <td><a href="https://www.youtube.com/watch?v=rykDVh-QFfw">Learn more with RichText</a></td>
+    </tr>
+      <tr>
+        <td><pre><code>
+class MyTextInputField extends StatelessWidget {
+  final IconData leadingIcon, actionIcon1, actionIcon2;
+  final String hint;
+  final TextInputType inputType;
+  final TextInputAction inputAction;
+  final bool obscureText;
+  final int maxLines;
+  final double containerHeight;
+  //
+  //
+  const MyTextInputField({Key key,this.leadingIcon, @required this.hint,
+    this.inputType,this.inputAction,this.actionIcon1,this.actionIcon2,
+    this.obscureText = false,this.maxLines,this.containerHeight,
+  }) : super(key: key);
+  //
+  //
+  @override
+  Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 10.0),
+      child: Container(
+            height: size.height * 0.06,width: size.width * 0.8,
+            constraints: BoxConstraints.tightFor(height: containerHeight),
+            decoration: BoxDecoration(color: colorIcon,
+            borderRadius: BorderRadius.circular(20),
+            border: Border.all(width: 1.0, color: colorText),),
+            child: Row(
+                children: [
+                    Container(
+                        child: Icon(leadingIcon,color: colorText,),
+                        padding: EdgeInsets.symmetric(horizontal: 10.0),),
+                    Expanded(
+                        child: TextField(keyboardType: inputType,
+                        textInputAction: inputAction,
+                        maxLines: maxLines,
+                        obscureText: obscureText,
+                        strutStyle: StrutStyle.disabled,
+                        decoration: InputDecoration(
+                        hintText: hint ),),),
+                    Container(
+                        child: Icon(actionIcon1,color: colorText,),
+                        padding: EdgeInsets.symmetric(horizontal: 10.0),),
+                    Container(
+                        child: Icon(actionIcon2,color: colorText,),
+                        padding: EdgeInsets.only(right: 10.0)),
+                    ]
+                )
+            ),
+    );
+  }
+}
+  </code></pre></td>
+    <td><img src="assets/images/my_text_input_field.png" width="200"></td>
     </tr>
 </table>
 
