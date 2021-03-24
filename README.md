@@ -171,7 +171,7 @@ class MyCustomText extends Text {
 }
   </code></pre> 
   </td>
-        <td><img src="assets/images/my_standard_text.png" width="200"></td>
+        <td><img src="assets/images/my_normal_text.png" width="200"></td>
     </tr>
 </table>
 
