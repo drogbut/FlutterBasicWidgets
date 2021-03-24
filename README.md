@@ -54,6 +54,7 @@ By considering colour theory, gradients make an application more visually intere
     </tr>
       <tr>
         <td><pre><code>
+//*********************** buid-method ****************************//
 Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.all(Radius.circular(48.0)),
@@ -90,9 +91,11 @@ Try AppBar examples directly from [DartPad](https://dartpad.dartlang.org/flutter
     </tr>
       <tr>
         <td><pre><code>
+//*********************** buid-method ****************************//
 class MyAppBar extends AppBar {
-  MyAppBar(String title, double titleSize,
-      {colorAppWidgets: colorIcon, double elevation = 4.0, Color color})
+  MyAppBar(String title, double titleSize, {
+  colorAppWidgets: colorIcon, 
+  double elevation = 4.0, Color color})
       : super(
             title: Row(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -109,7 +112,8 @@ class MyAppBar extends AppBar {
                   padding: const EdgeInsets.only(left: 16.0),
                   child: Text(title,
                       style: TextStyle(
-                          fontSize: titleSize, color: colorAppWidgets)),
+                          fontSize: titleSize, 
+                          color: colorAppWidgets)),
                 ),
               ],
             ),
@@ -144,6 +148,7 @@ Try out Text widget and it's properties directly from [DartPad](https://dartpad.
     </tr>
       <tr>
         <td><pre><code>
+//*********************** buid-method ****************************//
 class MyCustomText extends Text {
   MyCustomText(String data, {
     double textScaleFactor = 1.2,
@@ -185,6 +190,7 @@ Try out TextField widget and it's properties directly from [DartPad](https://dar
     </tr>
       <tr>
         <td><pre><code>
+//*********************** buid-method ****************************//
 class MyTextInputField extends StatelessWidget {
   final IconData leadingIcon, actionIcon1, actionIcon2;
   final String hint;
