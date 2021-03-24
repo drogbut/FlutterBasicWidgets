@@ -82,6 +82,7 @@ Container(
 # B. AppBar
 ## 2. My custom AppBar class
 Try AppBar examples directly from [DartPad](https://dartpad.dartlang.org/flutter).
+<table style="width:800px">
     <tr>
         <td>MyAppBar extends AppBar</td>
         <td><a href="https://www.youtube.com/watch?v=mSc7qFzxHDw">Also SilverAppBar</a></td>
