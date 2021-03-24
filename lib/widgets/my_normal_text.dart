@@ -5,10 +5,11 @@ import 'package:mise_en_page/my_constants.dart';
 
 class MyCustomText extends Text {
 
-
   MyCustomText(String data, {
-    double textScaleFactor,
-    double fontSize = 20.0,
+    double textScaleFactor = 1.2,
+    double fontSize = 11.0,
+    double letterSpacing = 2.0,
+    double wordSpacing = 40.0,
     fontWeight: FontWeight.normal,
     color: colorText,
     TextDecoration decoration,
@@ -21,8 +22,8 @@ class MyCustomText extends Text {
             color: color,
             fontSize: fontSize,
             fontWeight: fontWeight,
-            letterSpacing: 2.0,
-            wordSpacing: 40.0,
+            letterSpacing: letterSpacing,
+            wordSpacing: wordSpacing,
             decoration: decoration,
             decorationStyle: TextDecorationStyle.wavy
         ),

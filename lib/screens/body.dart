@@ -30,12 +30,14 @@ class _BodyState extends State<Body> {
               MyContainer(
                   context,
                   [
-                    MyCustomText("Text And TextField",
+                    MyCustomText("My standard Text",
                       textScaleFactor: 1.2,
+                      fontSize: 24.0,
+                      color: colorIcon,
                       fontWeight: FontWeight.bold,
 
                     ),
-                    MyCustomText("My underline Text",
+                   /* MyCustomText("My underline Text",
                       decoration: TextDecoration.underline,
                     ),
                     MyTextInputField(
@@ -65,10 +67,10 @@ class _BodyState extends State<Body> {
                       inputAction: TextInputAction.done,
                       maxLines: 10,
                       containerHeight: 200.0,
-                    ),
+                    ),*/
                   ]
               ),
-              MyContainer(
+              /*MyContainer(
                   context,
                   [
                     MyContainerButton(
@@ -224,7 +226,7 @@ class _BodyState extends State<Body> {
                       color: Colors.white,
                     ),
                   ),
-                  onPressed: toNewPage)
+                  onPressed: toNewPage)*/
             ],
           )
       ),

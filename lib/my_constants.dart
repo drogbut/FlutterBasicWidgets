@@ -11,14 +11,6 @@ const Color colorBackground = Color(0xf3D6D7D7);
 
 
 
-
-/// Hey you can define style, color ...
-const TextStyle myBodyTextStyle = TextStyle(
-    fontSize: 12,
-    color: colorText,
-    fontWeight: FontWeight.bold,
-    height: 1.5);
-
 const ButtonStyle myButtonStyle = ButtonStyle();
 
 /// this is images app

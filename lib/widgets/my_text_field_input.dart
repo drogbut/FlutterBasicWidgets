@@ -60,7 +60,9 @@ class MyTextInputField extends StatelessWidget {
                   obscureText: obscureText,
                   strutStyle: StrutStyle.disabled,
                   decoration: InputDecoration(
-                      hintText: hint, hintStyle: myBodyTextStyle),
+                      hintText: hint,
+                      /*hintStyle: myTextStyle*/
+                  ),
                 ),
               ),
               Container(
