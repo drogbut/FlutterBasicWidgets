@@ -201,9 +201,11 @@ class MyTextInputField extends StatelessWidget {
   final double containerHeight;
   //
   //
-  const MyTextInputField({Key key,this.leadingIcon, @required this.hint,
-    this.inputType,this.inputAction,this.actionIcon1,this.actionIcon2,
-    this.obscureText = false,this.maxLines,this.containerHeight,
+  const MyTextInputField({
+    Key key,this.leadingIcon, @required this.hint,
+    this.inputType,this.inputAction,this.actionIcon1,
+    this.actionIcon2,this.obscureText = false,this.maxLines,
+    this.containerHeight,
   }) : super(key: key);
   //
   //
@@ -214,7 +216,8 @@ class MyTextInputField extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 10.0),
       child: Container(
             height: size.height * 0.06,width: size.width * 0.8,
-            constraints: BoxConstraints.tightFor(height: containerHeight),
+            constraints: 
+            BoxConstraints.tightFor(height: containerHeight),
             decoration: BoxDecoration(color: colorIcon,
             borderRadius: BorderRadius.circular(20),
             border: Border.all(width: 1.0, color: colorText),),
@@ -222,7 +225,8 @@ class MyTextInputField extends StatelessWidget {
                 children: [
                     Container(
                         child: Icon(leadingIcon,color: colorText,),
-                        padding: EdgeInsets.symmetric(horizontal: 10.0),),
+                        padding: 
+                        EdgeInsets.symmetric(horizontal: 10.0),),
                     Expanded(
                         child: TextField(keyboardType: inputType,
                         textInputAction: inputAction,
@@ -233,7 +237,8 @@ class MyTextInputField extends StatelessWidget {
                         hintText: hint ),),),
                     Container(
                         child: Icon(actionIcon1,color: colorText,),
-                        padding: EdgeInsets.symmetric(horizontal: 10.0),),
+                        padding: 
+                        EdgeInsets.symmetric(horizontal: 10.0),),
                     Container(
                         child: Icon(actionIcon2,color: colorText,),
                         padding: EdgeInsets.only(right: 10.0)),
