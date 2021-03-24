@@ -39,7 +39,7 @@ If you want to overlay children relatively to a parent, use the Stack widget. In
   }
   </code></pre> 
   </td>
-        <td><img src="assets/images/Stack.png" width="200"></td>
+        <td><img src="assets/images/my_stack.png" width="200"></td>
     </tr>
 </table>
 
@@ -128,7 +128,7 @@ class MyAppBar extends AppBar {
 }
   </code></pre> 
   </td>
-        <td><img src="assets/images/Stack.png" width="200"></td>
+        <td><img src="assets/images/my_appbar.png" width="200"></td>
     </tr>
 </table>
 

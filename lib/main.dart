@@ -40,8 +40,8 @@ class _MyHomePageState extends State<MyHomePage> {
         new MyBackgroundImage(imagePath: "assets/images/image1.jpg",),
         Scaffold(
           backgroundColor: Colors.transparent,
-          appBar: new MyAppBar(widget.title, 20.0, color: Colors.transparent,),
-          body: new Body(),
+          /*appBar: new MyAppBar(widget.title, 20.0, color: Colors.transparent,),*/
+          /*body: new Body(),*/
           /*floatingActionButton: FloatingActionButton(
             onPressed: null,
             child: new Icon(Icons.camera_alt),
