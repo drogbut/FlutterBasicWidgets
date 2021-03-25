@@ -336,6 +336,43 @@ MyCustomButton(
         </tr>
 </table>
 
+## 3. My custom Image
+Try out Image widget and it's properties directly from [DartPad](https://dartpad.dartlang.org/flutter)
+<table style="width:800px">
+    <tr>
+        <td>Play with Image properties and styles</td>
+        <td><a href="https://www.youtube.com/watch?v=7oIAs-0G4mw">Learn more about Image</a></td>
+    </tr>
+    <tr>
+        <td><pre><code>
+//***********************Example code****************************//
+class MyCardWithChild extends Card {
+  MyCardWithChild({
+    @required Widget child,
+    Color color = colorIcon,
+    double elevation = 10.0,
+    double left = 10.0,
+    double right = 10.0,
+    double top = 10.0,
+    double bottom = 10.0,
+    ShapeBorder shapeBorder,
+  }): super(
+    child: child,
+    color: color,
+    elevation: elevation,
+    margin: EdgeInsets.only(
+        left: left,
+        right: right,
+        top: top,
+        bottom: bottom),
+    shape: shapeBorder
+  );
+}
+  </code></pre></td>
+    <td><img src="assets/images/my_custom_image.png" width="200"></td>
+    </tr>
+</table>
+
 ### Learn more on Flutter    
 [Official Flutter documentation](https://flutter.dev/docs) <br>
 [Flutter widget list](https://flutter.dev/docs/development/ui/widgets) <br>

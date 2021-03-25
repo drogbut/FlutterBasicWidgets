@@ -28,7 +28,7 @@ class _BodyState extends State<Body> {
           child: new Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              /*new Row(
+             /* new Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   IconButton(
@@ -92,7 +92,7 @@ class _BodyState extends State<Body> {
                       containerHeight: 200.0,
                     ),
                   ]
-              ),*/
+              ),
               MyContainer(
                   context,
                   [
@@ -208,14 +208,11 @@ class _BodyState extends State<Body> {
                         ),
                     ),
                   ]
-              ),
+              ),*/
               MyContainer(
                   context,
                   [
-                    MyCustomText("My custom Image", ),
-                    MyPaddingWithChild(
-                      child: Image(image: logoImage,),
-                    ),
+                    MyCustomText("My custom Image", color: colorIcon, fontSize: 15.0,),
                     MyCardWithChild(child: Image.asset("assets/images/image1.jpg",
                       height: 250.0,
                       width: MediaQuery.of(context).size.width/1.5,
