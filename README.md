@@ -16,20 +16,23 @@ Here you will find a quick way to customise the basic flutter widgets to your ta
 
 ## 1. Stack 
 If you want to overlay children relatively to a parent, use the Stack widget. In this example, Stack is used to order the appBar and the body relatively to a parent image in background.
-<table style="width:800px">
+<table>
     <tr>
         <td>How to overlay children relatively on an image ?</td>
         <td><a href="https://www.youtube.com/watch?v=liEGSeD3Zt8">Learn more about Stack</a></td>
     </tr>
       <tr>
         <td><pre><code>
- @override
+//**********************Eexemple code****************************//
+@override
   Widget build(BuildContext context) {
     return Stack(
       children: [
         Image.network('https://picsum.photos/250?image=9'),
         Scaffold(backgroundColor: Colors.transparent,
-          appBar: new MyAppBar( widget.title, 20.0, color: Colors.transparent,),
+          appBar: 
+            new MyAppBar( widget.title, 20.0, 
+            color: Colors.transparen),
           body:  Container(),         
         ),
       ],
@@ -51,6 +54,7 @@ By considering colour theory, gradients make an application more visually intere
     </tr>
       <tr>
         <td><pre><code>
+//***********************Eexemple code****************************//
 Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.all(Radius.circular(48.0)),
@@ -87,9 +91,11 @@ Try AppBar examples directly from [DartPad](https://dartpad.dartlang.org/flutter
     </tr>
       <tr>
         <td><pre><code>
+//***********************Eexemple code****************************//
 class MyAppBar extends AppBar {
-  MyAppBar(String title, double titleSize,
-      {colorAppWidgets: colorIcon, double elevation = 4.0, Color color})
+  MyAppBar(String title, double titleSize, {
+  colorAppWidgets: colorIcon, 
+  double elevation = 4.0, Color color})
       : super(
             title: Row(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -106,7 +112,8 @@ class MyAppBar extends AppBar {
                   padding: const EdgeInsets.only(left: 16.0),
                   child: Text(title,
                       style: TextStyle(
-                          fontSize: titleSize, color: colorAppWidgets)),
+                          fontSize: titleSize, 
+                          color: colorAppWidgets)),
                 ),
               ],
             ),
@@ -141,6 +148,7 @@ Try out Text widget and it's properties directly from [DartPad](https://dartpad.
     </tr>
       <tr>
         <td><pre><code>
+//***********************Eexemple code****************************//
 class MyCustomText extends Text {
   MyCustomText(String data, {
     double textScaleFactor = 1.2,
@@ -182,6 +190,7 @@ Try out TextField widget and it's properties directly from [DartPad](https://dar
     </tr>
       <tr>
         <td><pre><code>
+//***********************Eexemple code****************************//
 class MyTextInputField extends StatelessWidget {
   final IconData leadingIcon, actionIcon1, actionIcon2;
   final String hint;
@@ -192,9 +201,11 @@ class MyTextInputField extends StatelessWidget {
   final double containerHeight;
   //
   //
-  const MyTextInputField({Key key,this.leadingIcon, @required this.hint,
-    this.inputType,this.inputAction,this.actionIcon1,this.actionIcon2,
-    this.obscureText = false,this.maxLines,this.containerHeight,
+  const MyTextInputField({
+    Key key,this.leadingIcon, @required this.hint,
+    this.inputType,this.inputAction,this.actionIcon1,
+    this.actionIcon2,this.obscureText = false,this.maxLines,
+    this.containerHeight,
   }) : super(key: key);
   //
   //
@@ -205,7 +216,8 @@ class MyTextInputField extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 10.0),
       child: Container(
             height: size.height * 0.06,width: size.width * 0.8,
-            constraints: BoxConstraints.tightFor(height: containerHeight),
+            constraints: 
+            BoxConstraints.tightFor(height: containerHeight),
             decoration: BoxDecoration(color: colorIcon,
             borderRadius: BorderRadius.circular(20),
             border: Border.all(width: 1.0, color: colorText),),
@@ -213,7 +225,8 @@ class MyTextInputField extends StatelessWidget {
                 children: [
                     Container(
                         child: Icon(leadingIcon,color: colorText,),
-                        padding: EdgeInsets.symmetric(horizontal: 10.0),),
+                        padding: 
+                        EdgeInsets.symmetric(horizontal: 10.0),),
                     Expanded(
                         child: TextField(keyboardType: inputType,
                         textInputAction: inputAction,
@@ -224,7 +237,8 @@ class MyTextInputField extends StatelessWidget {
                         hintText: hint ),),),
                     Container(
                         child: Icon(actionIcon1,color: colorText,),
-                        padding: EdgeInsets.symmetric(horizontal: 10.0),),
+                        padding: 
+                        EdgeInsets.symmetric(horizontal: 10.0),),
                     Container(
                         child: Icon(actionIcon2,color: colorText,),
                         padding: EdgeInsets.only(right: 10.0)),
