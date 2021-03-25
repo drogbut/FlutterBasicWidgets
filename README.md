@@ -239,6 +239,87 @@ class MyTextInputField extends StatelessWidget {
     </tr>
 </table>
 
+## 3. My custom Button
+Try out Button widget and it's properties directly from [DartPad](https://dartpad.dartlang.org/flutter)
+<table style="width:800px">
+    <tr>
+        <td>Play with Button properties and styles</td>
+        <td><a href="https://www.youtube.com/watch?v=kVEguaQWGAY">Also ToggleButtons</a></td>
+    </tr>
+    <tr>
+        <td><pre><code>
+class MyCustomButton extends StatelessWidget {
+  final double elevation;
+  final double radius;
+  final double width;
+  final double height;
+  final Widget child;
+  final BoxDecoration decoration;
+  final ShapeBorder shapeBorder;
+  final Alignment alignment;
+  //
+  MyCustomButton({
+    Key key,
+    this.elevation = 7.5,
+    this.radius = 25.0,
+    this.width = 300.0,
+    this.height = 50.0,
+    this.child,
+    this.decoration,
+    this.shapeBorder,
+    this.alignment,
+  }) : super(key: key);
+  //
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+        color: Colors.transparent,
+        elevation: elevation,
+        shape: shapeBorder,
+        child: Container(
+            alignment: alignment,
+            width: width,
+            height: height,
+            decoration: decoration,
+            child: child));
+  }
+}
+  </code></pre></td>
+    <td><img src="assets/images/my_custom_button1.png" width="200"></td>
+    </tr>
+    <tr>
+            <td><pre><code>
+MyCustomButton(
+    decoration: BoxDecoration(
+        color: Colors.deepPurpleAccent,
+        borderRadius: BorderRadius.vertical(
+            top: Radius.circular(25.0),
+            //bottom: Radius.circular(1.0))
+    ),
+    child: OutlineButton(
+        color: Colors.deepPurpleAccent,
+        highlightedBorderColor: Colors.purple,
+        splashColor: Colors.green,
+        onPressed: (){},
+        borderSide: BorderSide(
+            width: 5.0,
+            color: Colors.deepPurpleAccent),
+            child: MyCustomText("My Outline Button",
+                fontSize: 15.0,
+                color: colorIcon,),
+    shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(
+            top: Radius.circular(20.0),
+            bottom: Radius.circular(1.0)
+        )
+    ),
+ ),
+)
+      </code></pre></td>
+        <td><img src="assets/images/my_custom_button1.png" width="200"></td>
+        </tr>
+</table>
+
 ### Learn more on Flutter    
 [Official Flutter documentation](https://flutter.dev/docs) <br>
 [Flutter widget list](https://flutter.dev/docs/development/ui/widgets) <br>

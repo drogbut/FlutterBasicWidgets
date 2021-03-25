@@ -12,7 +12,7 @@ class MyCustomText extends Text {
     decoration:  TextDecoration.none,
     fontWeight: FontWeight.normal,
     color: colorText,
-    textDecorationStyle: TextDecorationStyle,
+    textDecorationStyle: TextDecorationStyle.solid,
     textAlign: TextAlign.center,
   }) :super(
         data,

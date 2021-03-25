@@ -1,11 +1,6 @@
-
-
-
 import 'package:flutter/material.dart';
 
-
-class MyContainerButton extends StatelessWidget {
-
+class MyCustomButton extends StatelessWidget {
   final double elevation;
   final double radius;
   final double width;
@@ -14,10 +9,10 @@ class MyContainerButton extends StatelessWidget {
   final BoxDecoration decoration;
   final ShapeBorder shapeBorder;
   final Alignment alignment;
-
-  MyContainerButton({
+  //
+  MyCustomButton({
     Key key,
-    this.elevation= 7.5,
+    this.elevation = 7.5,
     this.radius = 25.0,
     this.width = 300.0,
     this.height = 50.0,
@@ -26,22 +21,18 @@ class MyContainerButton extends StatelessWidget {
     this.shapeBorder,
     this.alignment,
   }) : super(key: key);
-
-  //------------ methods------------------//
+  //
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: Colors.transparent,
+        color: Colors.transparent,
         elevation: elevation,
         shape: shapeBorder,
         child: Container(
-          alignment: alignment,
+            alignment: alignment,
             width: width,
             height: height,
             decoration: decoration,
-            child: child
-        )
-    );
+            child: child));
   }
 }
-

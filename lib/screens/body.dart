@@ -13,6 +13,7 @@ class Body extends StatefulWidget {
 class _BodyState extends State<Body> {
 
   SecondPage secondPage;
+  int count = 4;
 
   void initState() {
     super.initState();
@@ -25,23 +26,43 @@ class _BodyState extends State<Body> {
       child: InkWell(
         onTap: (() => FocusScope.of(context).requestFocus(FocusNode())),
           child: new Column(
-            mainAxisAlignment: MainAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              /*new Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  IconButton(
+                    icon: Icon(Icons.remove, color: colorIcon, size: 18.0,),
+                    onPressed: (){
+                      if(count > 0){
+                        onCountChanged(-1);
+                      }
+                  },),
+                  MyCustomText("$count", color: colorIcon, fontSize: 18.0,),
+                  IconButton(
+                    icon: Icon(Icons.add, color: colorIcon, size: 18.0,),
+                    onPressed: (){
+                      onCountChanged(1);
+                    },),
+                ],
+              ),
               MyContainer(
                   context,
                   [
-                    /*MyCustomText("My standard Text",
+
+                    MyCustomText("My standard Text",
                       textScaleFactor: 1.2,
                       fontSize: 24.0,
                       color: colorIcon,
                       fontWeight: FontWeight.bold,
+                      textDecorationStyle: TextDecorationStyle.wavy,
                     ),
                     MyCustomText("My underline Text",
                       color: colorIcon,
                       decoration: TextDecoration.underline,
                       fontSize: 24.0,
                       textDecorationStyle: TextDecorationStyle.wavy,
-                    ),*/
+                    ),
                     MyTextInputField(
                       leadingIcon: Icons.person,
                       actionIcon1: Icons.add,
@@ -71,11 +92,11 @@ class _BodyState extends State<Body> {
                       containerHeight: 200.0,
                     ),
                   ]
-              ),
-              /*MyContainer(
+              ),*/
+              MyContainer(
                   context,
                   [
-                    MyContainerButton(
+                    MyCustomButton(
                       shapeBorder: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(25.0),
                       ),
@@ -83,12 +104,19 @@ class _BodyState extends State<Body> {
                           onPressed: (){},
                           child: MyCustomText(
                             "My Gradient Button",
-                            fontSize: 18.0,
                             color: colorIcon,
+                            fontSize: 15.0,
                           )
                       ),
+                      decoration: BoxDecoration(
+                          color: colorPrimary,
+                        borderRadius: BorderRadius.circular(25.0),
+                        gradient: LinearGradient(
+                            colors: [colorPrimary, Colors.purple
+                            ])
+                      ),
                     ),
-                    MyContainerButton(
+                    MyCustomButton(
                       shapeBorder: RoundedRectangleBorder(
                           borderRadius: BorderRadius.horizontal(
                               left: Radius.circular(25.0),
@@ -107,10 +135,13 @@ class _BodyState extends State<Body> {
                         splashColor: Colors.deepPurpleAccent,
                         highlightColor: Colors.red,
                         onPressed: (){},
-                        child: MyCustomText("My Flat Button", color: colorIcon,)
+                        child: MyCustomText("My Flat Button",
+                          color: colorIcon,
+                           fontSize: 15.0,
+                        )
                     ),
                     ),
-                    MyContainerButton(
+                    MyCustomButton(
                       child: MaterialButton(
                           elevation: 20.0,
                           minWidth: 250.0,
@@ -119,28 +150,31 @@ class _BodyState extends State<Body> {
                           highlightElevation: 1.0,
                           color: Colors.purple,
                           onPressed: (){},
-                          child: MyCustomText("My Material Button", fontSize: 18.0, color: colorIcon,)
+                          child: MyCustomText("My Material Button",
+                            fontSize: 15.0,
+                            color: colorIcon,
+                          )
                       ),
                     ),
-                    MyContainerButton(
+                    MyCustomButton(
                       decoration: BoxDecoration(
-                        color: Colors.deepPurpleAccent,
-                        borderRadius: BorderRadius.vertical(
+                          color: Colors.deepPurpleAccent,
+                          borderRadius: BorderRadius.vertical(
                             top: Radius.circular(25.0),
                             //bottom: Radius.circular(1.0)
-                        )
+                          )
                       ),
                       child: OutlineButton(
                         color: Colors.deepPurpleAccent,
-                          highlightedBorderColor: Colors.purple,
-                          splashColor: Colors.green,
-                          onPressed: (){},
-                          borderSide: BorderSide(
-                              width: 5.0,
-                              color: Colors.deepPurpleAccent
-                          ),
-                          child: MyCustomText("My Outline Button",
-                            fontSize: 18.0,
+                        highlightedBorderColor: Colors.purple,
+                        splashColor: Colors.green,
+                        onPressed: (){},
+                        borderSide: BorderSide(
+                            width: 5.0,
+                            color: Colors.deepPurpleAccent
+                        ),
+                        child: MyCustomText("My Outline Button",
+                          fontSize: 15.0,
                           color: colorIcon,),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.vertical(
@@ -150,7 +184,7 @@ class _BodyState extends State<Body> {
                         ),
                       ),
                     ),
-                    MyContainerButton(
+                    MyCustomButton(
                         decoration: BoxDecoration(
                             color:colorPrimary,
                         ),
@@ -162,7 +196,7 @@ class _BodyState extends State<Body> {
                           onPressed: (){}
                           )
                     ),
-                    MyContainerButton(
+                    MyCustomButton(
                      alignment: Alignment.bottomRight,
                         decoration: BoxDecoration(
                           color:colorPrimary,
@@ -228,13 +262,16 @@ class _BodyState extends State<Body> {
                       color: Colors.white,
                     ),
                   ),
-                  onPressed: toNewPage)*/
+                  onPressed: toNewPage)
             ],
           )
       ),
       );
   }
 
+void onCountChanged(int val) {
+  setState(() => count += val);
+  }
 
   void pressed() {
     setState(() {
