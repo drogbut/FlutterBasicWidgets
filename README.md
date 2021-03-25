@@ -262,6 +262,7 @@ Try out Button widget and it's properties directly from [DartPad](https://dartpa
     </tr>
     <tr>
         <td><pre><code>
+//***********************Eexemple code****************************//
 class MyCustomButton extends StatelessWidget {
   final double elevation;
   final double radius;
@@ -303,6 +304,7 @@ class MyCustomButton extends StatelessWidget {
     </tr>
     <tr>
             <td><pre><code>
+//***********************Eexemple code****************************//
 MyCustomButton(
     decoration: BoxDecoration(
         color: Colors.deepPurpleAccent,
