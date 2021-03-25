@@ -332,7 +332,7 @@ MyCustomButton(
  ),
 )
       </code></pre></td>
-        <td><img src="assets/images/my_custom_button1.png" width="200"></td>
+        <td><img src="assets/images/my_custom_button2.png" width="200"></td>
         </tr>
 </table>
 
