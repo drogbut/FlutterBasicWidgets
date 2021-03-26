@@ -1,7 +1,10 @@
+import 'package:flushbar/flushbar.dart';
+import 'package:flushbar/flushbar_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:mise_en_page/my_constants.dart';
 import 'package:mise_en_page/widgets/my_widgets.dart';
+
 import 'second_page.dart';
 
 class Body extends StatefulWidget {
@@ -28,7 +31,7 @@ class _BodyState extends State<Body> {
           child: new Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-             /* new Row(
+              /*new Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   IconButton(
@@ -208,7 +211,7 @@ class _BodyState extends State<Body> {
                         ),
                     ),
                   ]
-              ),*/
+              ),
               MyContainer(
                   context,
                   [
@@ -219,47 +222,114 @@ class _BodyState extends State<Body> {
                       fit: BoxFit.cover,)),
                     ]
               ),
-              
-              new RaisedButton(
-                  color: Colors.teal,
-                  child: new Text(
-                    "Show the snackbar",
-                    style: new TextStyle(
-                      fontSize: 20.0,
-                      color: Colors.white,
-                    ),
+              */
+              MyContainer(context, [
+                MyCustomButton(
+                  shapeBorder: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(25.0),
                   ),
-                  onPressed: snack),
-              new RaisedButton(
-                  color: Colors.teal,
-                  child: new Text(
-                    "Show a alert dialog",
-                    style: new TextStyle(
-                      fontSize: 20.0,
-                      color: Colors.white,
-                    ),
+                  child: TextButton(
+                      onPressed: showDefaultSnackbar,
+                      child: MyCustomText(
+                        "Show default snackbar",
+                        color: colorIcon,
+                        fontSize: 18.0,
+                      )),
+                  decoration: BoxDecoration(
+                      color: Colors.purple,
+                      borderRadius: BorderRadius.circular(25.0)),
+                ),
+                MyCustomButton(
+                  shapeBorder: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(25.0),
                   ),
-                  onPressed: alert),
-              new RaisedButton(
-                  color: Colors.teal,
-                  child: new Text(
-                    "Show a  simple alert",
-                    style: new TextStyle(
-                      fontSize: 20.0,
-                      color: Colors.white,
-                    ),
+                  child: TextButton(
+                      onPressed: () => showSimpleFlushbar(context),
+                      child: MyCustomText(
+                        "Show simple flushbar",
+                        color: colorIcon,
+                        fontSize: 18.0,
+                      )),
+                  decoration: BoxDecoration(
+                      color: colorPrimary,
+                      borderRadius: BorderRadius.circular(25.0)),
+                ),
+                MyCustomButton(
+                  shapeBorder: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(25.0),
                   ),
-                  onPressed: (() => simpleAlert("Faites votre choix", "description"))),
-              new RaisedButton(
-                  color: Colors.teal,
-                  child: new Text(
-                    "Show the next page",
-                    style: new TextStyle(
-                      fontSize: 20.0,
-                      color: Colors.white,
-                    ),
+                  child: TextButton(
+                      onPressed: () => showInfoFlushbar(context),
+                      child: MyCustomText(
+                        "Show info snackbar",
+                        color: colorIcon,
+                        fontSize: 18.0,
+                      )),
+                  decoration: BoxDecoration(
+                      color: Colors.purple,
+                      borderRadius: BorderRadius.circular(25.0)),
+                ),
+                MyCustomButton(
+                  shapeBorder: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(25.0),
                   ),
-                  onPressed: toNewPage)
+                  child: TextButton(
+                      onPressed: () => showFlushbarHelper(context),
+                      child: MyCustomText(
+                        "Show snackbar helper",
+                        color: colorIcon,
+                        fontSize: 18.0,
+                      )),
+                  decoration: BoxDecoration(
+                      color: colorPrimary,
+                      borderRadius: BorderRadius.circular(25.0)),
+                ),
+                MyCustomButton(
+                  shapeBorder: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(25.0),
+                  ),
+                  child: TextButton(
+                      onPressed: () => showFloatingSnackbar(context),
+                      child: MyCustomText(
+                        "Show floating snackbar",
+                        color: colorIcon,
+                        fontSize: 18.0,
+                      )),
+                  decoration: BoxDecoration(
+                      color: Colors.purple,
+                      borderRadius: BorderRadius.circular(25.0)),
+                ),
+                /*new RaisedButton(
+                    color: Colors.teal,
+                    child: new Text(
+                      "Show a alert dialog",
+                      style: new TextStyle(
+                        fontSize: 20.0,
+                        color: Colors.white,
+                      ),
+                    ),
+                    onPressed: alert),
+                new RaisedButton(
+                    color: Colors.teal,
+                    child: new Text(
+                      "Show a  simple alert",
+                      style: new TextStyle(
+                        fontSize: 20.0,
+                        color: Colors.white,
+                      ),
+                    ),
+                    onPressed: (() => simpleAlert("Faites votre choix", "description"))),
+                new RaisedButton(
+                    color: Colors.teal,
+                    child: new Text(
+                      "Show the next page",
+                      style: new TextStyle(
+                        fontSize: 20.0,
+                        color: Colors.white,
+                      ),
+                    ),
+                    onPressed: toNewPage)*/
+              ])
             ],
           )
       ),
@@ -276,16 +346,18 @@ void onCountChanged(int val) {
     });
   }
 
-  void snack() {
-    SnackBar snackbar = new SnackBar(
-      duration: new Duration(seconds: 2),
-            content: new Text(
-                "je suis votre snackbar...",
-              textScaleFactor: 2.0,
-
-            )
-        );
-    Scaffold.of(context).showSnackBar(snackbar);
+  void showDefaultSnackbar() {
+    Scaffold.of(context).showSnackBar(SnackBar(
+      duration: Duration(seconds: 5),
+      content: Text(
+        "Hello from the default snackbar",
+        textScaleFactor: 1.2,
+      ),
+      action: SnackBarAction(
+        label: "Click Me",
+        onPressed: () {},
+      ),
+    ));
   }
 
   Future<void> alert() async {
@@ -349,5 +421,60 @@ void onCountChanged(int val) {
     Navigator.push(context, MaterialPageRoute(builder: (BuildContext context){
       return new SecondPage();
     }));
+  }
+
+  void showSimpleFlushbar(BuildContext context) {
+    Flushbar(
+      title: "Hello from a Flushbar",
+      messageText: Text("This is a simple flushbar", style: TextStyle(color: colorIcon),),
+      mainButton: FlatButton(
+        onPressed: (){},
+        child: Text("Click Me",
+          style: TextStyle(color: Colors.purple),
+        ),
+      ),
+      duration: Duration(seconds: 3),
+    ).show(context);
+  }
+
+  showInfoFlushbar(BuildContext context) {
+    Flushbar(
+      title: "Hello from a Flushbar",
+      messageText: MyCustomText("This is a info flushbar",
+        color: colorIcon,
+        textAlign: TextAlign.left,),
+      icon: Icon(Icons.info_outline,
+        size: 28,
+        color: Colors.blue.shade300,
+      ),
+      leftBarIndicatorColor: Colors.blue.shade300,
+      duration: Duration(seconds: 3),
+    ).show(context);
+  }
+
+  showFlushbarHelper(BuildContext context) {
+    FlushbarHelper.createInformation(
+      title: "Hello from a helper Flushbar",
+      message: "This is a helper info flushbar",
+    ).show(context);
+  }
+
+  void showFloatingSnackbar(BuildContext context) {
+    Flushbar(
+      title: "Hello from the floating snackbar",
+      message: "This is a custom floating snackbar",
+      padding: EdgeInsets.all(10),
+      borderRadius: 8,
+      backgroundGradient: LinearGradient(
+          colors: [colorPrimary, Colors.purple], stops: [0.6, 1]),
+      boxShadows: [
+        BoxShadow(color: Colors.black45, offset: Offset(3, 3), blurRadius: 3)
+      ],
+      // All of the previous Flusbars could be dismissed by swiping down
+      // now we want to swipe to the sides
+      dismissDirection: FlushbarDismissDirection.HORIZONTAL,
+      // The default curve is Curves.easeOut
+      forwardAnimationCurve: Curves.fastLinearToSlowEaseIn,
+    ).show(context);
   }
 }

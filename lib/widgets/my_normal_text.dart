@@ -7,8 +7,8 @@ class MyCustomText extends Text {
   MyCustomText(String data, {
     double textScaleFactor = 1.2,
     double fontSize = 11.0,
-    double letterSpacing = 2.0,
-    double wordSpacing = 40.0,
+    double letterSpacing = 1.2,
+    double wordSpacing = 5.0,
     decoration:  TextDecoration.none,
     fontWeight: FontWeight.normal,
     color: colorText,

@@ -11,7 +11,9 @@ const Color colorBackground = Color(0xf3D6D7D7);
 
 
 
-const ButtonStyle myButtonStyle = ButtonStyle();
+const ButtonStyle myButtonStyle = ButtonStyle(
+
+);
 
 /// this is images app
 const AssetImage logoImage = AssetImage("assets/images/image1.jpg");

@@ -373,6 +373,86 @@ class MyCardWithChild extends Card {
     </tr>
 </table>
 
+## 4. My custom Snackbar
+Try out Snackbar widget and it's properties directly from [DartPad](https://dartpad.dartlang.org/flutter)
+<table style="width:800px">
+    <tr>
+        <td>Play with Snackbar properties and flushbar: ^1.5.0 package </td>
+        <td><a href="https://www.youtube.com/watch?v=zpO6n_oZWw0">Learn more about snackbar</a></td>
+    </tr>
+    <tr>
+        <td><pre><code>
+//***********************Example code****************************//
+ MyContainer(context, [
+    MyCustomButton(...),
+    MyCustomButton(
+        shapeBorder: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(25.0),),
+            child: TextButton(
+                onPressed: () => showSimpleFlushbar(context),
+                child: MyCustomText(
+                    "Show simple flushbar",
+                    color: colorIcon,
+                    fontSize: 18.0,)
+                    ),
+            decoration: BoxDecoration(
+                color: colorPrimary,
+                borderRadius: BorderRadius.circular(25.0)),
+                ),
+    MyCustomButton(...),
+    MyCustomButton(...),
+    MyCustomButton(...),
+  ]
+ )
+  </code></pre></td>
+    <td><img src="assets/images/my_snackbar_flush.png" width="200"></td>
+    </tr>
+    <tr>
+            <td><pre><code>
+//***********************Example code****************************//
+void showDefaultSnackbar() {
+    Scaffold.of(context).showSnackBar(SnackBar(
+      duration: Duration(seconds: 5),
+      content: Text(
+        "Hello from the default snackbar",
+        textScaleFactor: 1.2,
+      ),
+      action: SnackBarAction(
+        label: "Click Me",
+        onPressed: () {},
+      ),
+    ));
+  }
+</code></pre></td>
+        <td><img src="assets/images/my_snackbar_default.png" width="200"></td>
+        </tr>
+    <tr>
+   <td><pre><code>
+//***********************Example code****************************//
+void showFloatingSnackbar(BuildContext context) {
+    Flushbar(
+      title: "Hello from the floating snackbar",
+      message: "This is a custom floating snackbar",
+      padding: EdgeInsets.all(10),
+      borderRadius: 8,
+      backgroundGradient: LinearGradient(
+          colors: [colorPrimary, Colors.purple], stops: [0.6, 1]),
+      boxShadows: [
+        BoxShadow(color: Colors.black45, offset: Offset(3, 3), 
+        blurRadius: 3)
+      ],
+      // The previous flusbars could be dismissed by swiping down
+      // now we want to swipe to the sides
+      dismissDirection: FlushbarDismissDirection.HORIZONTAL,
+      // The default curve is Curves.easeOut
+      forwardAnimationCurve: Curves.fastLinearToSlowEaseIn,
+    ).show(context);
+  }
+ </code></pre></td>
+            <td><img src="assets/images/my_snackbar_floating.png" width="200"></td>
+            </tr>
+</table>
+
 ### Learn more on Flutter    
 [Official Flutter documentation](https://flutter.dev/docs) <br>
 [Flutter widget list](https://flutter.dev/docs/development/ui/widgets) <br>
