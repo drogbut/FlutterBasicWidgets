@@ -408,6 +408,10 @@ Try out Snackbar widget and it's properties directly from [DartPad](https://dart
     <td><img src="assets/images/my_snackbar_flush.png" width="200"></td>
     </tr>
     <tr>
+      <td>Show default snackbar</td>
+      <td></td>
+    </tr>
+    <tr>
             <td><pre><code>
 //***********************Example code****************************//
 void showDefaultSnackbar() {
@@ -426,6 +430,10 @@ void showDefaultSnackbar() {
 </code></pre></td>
         <td><img src="assets/images/my_snackbar_default.png" width="200"></td>
         </tr>
+       <tr>
+         <td>Show floating snackbar</td>
+         <td></td>
+       </tr>
     <tr>
    <td><pre><code>
 //***********************Example code****************************//
