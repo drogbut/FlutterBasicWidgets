@@ -1,11 +1,8 @@
-import 'package:flushbar/flushbar.dart';
-import 'package:flushbar/flushbar_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:mise_en_page/my_constants.dart';
 import 'package:mise_en_page/widgets/my_widgets.dart';
 
-import 'second_page.dart';
 
 class Body extends StatefulWidget {
 
@@ -15,7 +12,7 @@ class Body extends StatefulWidget {
 
 class _BodyState extends State<Body> {
 
-  SecondPage secondPage;
+  //SecondPage secondPage;
   int count = 4;
 
   void initState() {
@@ -24,14 +21,219 @@ class _BodyState extends State<Body> {
 
   @override
   Widget build(BuildContext context) {
+    double size = MediaQuery.of(context).size.width;
     return new SingleChildScrollView(
+      padding: EdgeInsets.all(25.0),
       /// Inkwell allows the keyboard to disappear when typing away from the keyboard
       child: InkWell(
-        onTap: (() => FocusScope.of(context).requestFocus(FocusNode())),
+          onTap: (() => FocusScope.of(context).requestFocus(FocusNode())),
           child: new Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              /*new Row(
+              MyAlertDialog(
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    MyCustomButton(onPressed: (){},
+                        backgroundButtonColor: alertDialogColor,
+                        child: MyCustomText(
+                          title: "ANNULER",
+                          textScaleFactor: 1.1,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.red.shade300,
+                          decoration: BoxDecoration(color: Colors.transparent),
+                        )
+                    ),
+                    MyCustomButton(onPressed: (){},
+                        backgroundButtonColor: alertDialogColor,
+                        child: MyCustomText(
+                          title: "SUPPRIMER",
+                          textScaleFactor: 1.1,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.red.shade300,
+                          decoration: BoxDecoration(color: Colors.transparent),
+                        )
+                    )
+                  ],
+                ),
+                title: "Supprimer le brouillon ?", titleColor: Colors.white70,
+                avatarChild: Text(""),
+                descriptionWidget: SizedBox(height: 50,),
+                backendContainerColor: alertDialogColor,
+              ),
+              MyAlertDialog(
+                Container(
+                    alignment: Alignment.center,
+                    child: MyCustomButton(onPressed: (){},
+                        backgroundButtonColor: Colors.red.shade300,
+                        width: 100,
+                        child: MyCustomText(
+                          title: "Okay",
+                          textScaleFactor: 1.5,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white70,
+                          decoration: BoxDecoration(color: Colors.transparent),
+                        )
+                    )
+                ),
+                title: "Warning !!!", titleColor: Colors.white70,
+                avatarPositionTop: 10,
+                marginTop: 80,
+                avatarChild: CircleAvatar(
+                  backgroundColor: Colors.red.shade300,
+                  radius: 50.0,
+                  child: Icon(Icons.assistant_photo, size: 50,
+                      color: Colors.white70),
+                ),
+
+                descriptionWidget: Container(
+                  height: 100,
+                  child: MyCustomText(
+                    title: "You can not access this file",
+                    alignment: Alignment.center,
+                    color: Colors.white70,
+                    textScaleFactor: 1.5,
+                  ),
+                ),
+                backendContainerColor: alertDialogColor,
+                alignSubmittedWidget: Alignment.center,
+              ),
+              MyAlertDialog(
+                Container(
+                  height: 130,
+                  decoration: BoxDecoration(color: Colors.red.shade300),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Container(
+                        child: MyCustomText(title: "You don't have enough balance",
+                          color: Colors.white70,
+                          alignment: Alignment.center,
+                          textScaleFactor: 1.5,
+                          decoration: BoxDecoration(color: Colors.red.shade300),),
+                      ),
+                      MyCustomButton(onPressed: (){},
+                        child: MyCustomText(title: "Okay",
+                          width: 100,
+                          color: Colors.white70,
+                          alignment: Alignment.center,
+                          textScaleFactor: 1.5,
+                        ),
+                        backgroundButtonColor: alertDialogColor,
+
+
+                      )
+                    ],
+                  ),
+                ),
+                title: " ",
+                avatarPositionTop: -50,
+                marginTop: 80,
+                marginBottom: 0.0,
+                avatarChild: Container(
+                  width: 80,
+                 height: 80,
+                 decoration: BoxDecoration(
+                   color: alertDialogColor,
+                     borderRadius: BorderRadius.circular(5),
+                 ),
+                  child: Icon(Icons.camera, size: 80,
+                      color: Colors.red.shade300),
+                ),
+                descriptionWidget: Text(""),
+                backendContainerColor: alertDialogColor,
+                alignSubmittedWidget: Alignment.center,
+              ),
+              MyAlertDialog(
+                Container(
+                  margin: EdgeInsets.only(bottom: 25, top: 25),
+                  child: MyCustomButton(onPressed: (){},
+                        child: MyCustomText(title: "Okay",
+                          width: 100,
+                          color: Colors.white70,
+                          alignment: Alignment.center,
+                          textScaleFactor: 1.5,
+                        ),
+                        backgroundButtonColor: Colors.red.shade300,
+                      )
+                ),
+                title: "Insert reset email adress",
+                titleColor: Colors.white70,
+                marginBottom: 0.0,
+                descriptionWidget: Container(
+                  alignment: Alignment.centerLeft,
+                  margin: EdgeInsets.only(left: 25, right: 25),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      SizedBox(height: 10,),
+                      MyTextInputField(hint: "user@gmail.com",
+                        borderRadius: 5,
+                        leadingIcon: Icons.mail,
+                      )
+                    ],
+                  ),
+                ),
+                avatarChild: Text(""),
+                backendContainerColor: alertDialogColor,
+                alignSubmittedWidget: Alignment.center,
+              ),
+              MyAlertDialog(
+                Container(
+                    alignment: Alignment.centerRight,
+                    child: MyCustomButton(onPressed: (){},
+                        backgroundButtonColor: alertDialogColor,
+                        width: 150,
+                        child: MyCustomText(
+                          title: "Confirm",
+                          textScaleFactor: 1.3,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.teal,
+                          alignment: Alignment.centerRight,
+                          decoration: BoxDecoration(color: alertDialogColor),
+                        )
+                    )
+                ),
+                title: "Success", titleColor: Colors.white70,
+                avatarPositionTop: 8,
+                marginTop: 150,
+                avatarChild: Container(
+                  width: 350,
+                  height: 170,
+                  child: ClipOval(
+                    clipBehavior: Clip.hardEdge,
+                    child: Container(
+                      color: alertDialogColor,
+                      child: Container(
+                        color: alertDialogColor,
+                        child: Icon(Icons.check_box, size: 80,color: Colors.teal,),
+                      ),
+
+                    ),
+                  ),
+                ),
+                descriptionWidget: Container(
+                  height: 200,
+                  child: MyCustomText(
+                    title: "You can not access this file You can not access this file"
+                        "You can not access this file You can not access this file"
+                        "You can not access this file You can not access this file",
+                    alignment: Alignment.center,
+                    color: Colors.white70,
+                    textScaleFactor: 1.2,
+                  ),
+                ),
+                backendContainerColor: alertDialogColor,
+                alignSubmittedWidget: Alignment.center,
+              ),
+/*              MyAlertDialog(
+                containerHeight: size,
+                containerWidth: size,
+                title: "Warning !!!",
+                description: "You can not access on this file",
+              ),
+              Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   IconButton(
@@ -222,7 +424,6 @@ class _BodyState extends State<Body> {
                       fit: BoxFit.cover,)),
                     ]
               ),
-              */
               MyContainer(context, [
                 MyCustomButton(
                   shapeBorder: RoundedRectangleBorder(
@@ -299,7 +500,59 @@ class _BodyState extends State<Body> {
                       color: Colors.purple,
                       borderRadius: BorderRadius.circular(25.0)),
                 ),
-                /*new RaisedButton(
+
+              ]),
+              MyContainer(context, [
+                MyAlertDialog(
+                  title: "Warming !!!",
+                  description: "You can not access this file",
+                  child:
+                    MyCustomButton(
+                        child: FlatButton(
+                          child: MyCustomText("Okay",
+                            color: Colors.white,
+                            fontSize: 18.0,
+                            fontWeight: FontWeight.bold,),
+                          onPressed: (){
+                            Navigator.of(context).pop();
+                          },
+                        ),
+                      width: 150.0,
+                      decoration: BoxDecoration(
+                        color: Colors.redAccent
+                      ),
+                    ),
+                ),
+              ]),
+              MyContainer(context, [
+                MyAlertDialog(
+                  title: "Insert reset email",
+                  description: "",
+                  avatarColor: Colors.transparent,
+                  avatarContainerColor: Colors.transparent,
+                  bottom: 0.0,
+                  child: MyCustomButton(
+                    child: FlatButton(
+                      child: MyCustomText("Close",
+                        color: Colors.teal,
+                        fontSize: 18.0,
+                        fontWeight: FontWeight.bold,),
+                      onPressed: (){
+                        Navigator.of(context).pop();
+                      },
+                    ),
+                    width: 150.0,
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                    ),
+                    elevation: 0.0,
+                    alignment: Alignment.bottomRight,
+                  ),
+
+                ),
+              ]),
+
+              RaisedButton(
                     color: Colors.teal,
                     child: new Text(
                       "Show a alert dialog",
@@ -309,7 +562,7 @@ class _BodyState extends State<Body> {
                       ),
                     ),
                     onPressed: alert),
-                new RaisedButton(
+              RaisedButton(
                     color: Colors.teal,
                     child: new Text(
                       "Show a  simple alert",
@@ -319,7 +572,7 @@ class _BodyState extends State<Body> {
                       ),
                     ),
                     onPressed: (() => simpleAlert("Faites votre choix", "description"))),
-                new RaisedButton(
+              RaisedButton(
                     color: Colors.teal,
                     child: new Text(
                       "Show the next page",
@@ -329,15 +582,14 @@ class _BodyState extends State<Body> {
                       ),
                     ),
                     onPressed: toNewPage)*/
-              ])
             ],
           )
       ),
-      );
+    );
   }
 
-void onCountChanged(int val) {
-  setState(() => count += val);
+  void onCountChanged(int val) {
+    setState(() => count += val);
   }
 
   void pressed() {
@@ -417,7 +669,7 @@ void onCountChanged(int val) {
     );
   }
 
-  void toNewPage(){
+/*void toNewPage(){
     Navigator.push(context, MaterialPageRoute(builder: (BuildContext context){
       return new SecondPage();
     }));
@@ -476,5 +728,7 @@ void onCountChanged(int val) {
       // The default curve is Curves.easeOut
       forwardAnimationCurve: Curves.fastLinearToSlowEaseIn,
     ).show(context);
-  }
+  }*/
+
+
 }

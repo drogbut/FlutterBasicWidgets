@@ -430,7 +430,7 @@ void showDefaultSnackbar() {
 </code></pre></td>
         <td><img src="assets/images/my_snackbar_default.png" width="200"></td>
         </tr>
-       <tr>
+    <tr>
          <td>Show floating snackbar</td>
          <td></td>
        </tr>
@@ -458,6 +458,193 @@ void showFloatingSnackbar(BuildContext context) {
   }
  </code></pre></td>
             <td><img src="assets/images/my_snackbar_floating.png" width="200"></td>
+            </tr>
+</table>
+
+## 5. My custom AlertDialog
+Try out AlertDialog widget and it's properties directly from [DartPad](https://dartpad.dartlang.org/flutter)
+<table style="width:800px">
+    <tr>
+        <td>Play with AlertDialog properties</td>
+        <td><a href="https://www.youtube.com/watch?v=75CsnyRXf5I">Learn more about AlertDialog</a></td>
+    </tr>
+    <tr>
+        <td><pre><code>
+//***********************Example code****************************//
+ class MyAlertDialog extends StatelessWidget {
+   ///
+   final AlignmentDirectional align;
+   double avatarPositionTop;
+   final double borderRadius, marginTop, marginBottom;
+   final String title;
+   final Color backendContainerColor, titleColor;
+   final Alignment alignSubmittedWidget;
+   final Widget descriptionWidget, avatarChild, submittedWidget;
+   ///
+   const MyAlertDialog(this.submittedWidget, {
+     Key key,@required this.title,
+     this.align = AlignmentDirectional.center,
+     this.backendContainerColor = Colors.white,
+     this.avatarPositionTop = 60,this.descriptionWidget,
+     this.avatarChild,this.titleColor,this.alignSubmittedWidget,
+     this.marginTop = 25.0,this.marginBottom = 25.0,
+     this.borderRadius = 5.0,
+   }) : super(key: key);
+   ///
+   @override
+   Widget build(BuildContext context) {
+     return Stack(
+       alignment: align,
+       overflow: Overflow.visible,
+       children: <Widget>[
+         Card(
+           color: backendContainerColor,
+           elevation: 7.5,
+           margin: EdgeInsets.only(top: 25.0, bottom: 25.0),
+           child: Container(
+             decoration: BoxDecoration(
+                 borderRadius: 
+                 BorderRadius.circular(borderRadius)),
+             child: Column(
+               children: [
+                 Container(
+                   child: Text(
+                     title,
+                     style: TextStyle(
+                         color: titleColor,
+                         fontWeight: FontWeight.bold,
+                         letterSpacing: 1.2,
+                         fontSize: 24.0),
+                   ),
+                   margin: EdgeInsets.only(top: marginTop),
+                 ),
+                 Container(
+                   child: descriptionWidget,
+                 ),
+                 Container(
+                   margin: EdgeInsets.only(bottom: marginBottom),
+                   child: submittedWidget,
+                   alignment: alignSubmittedWidget,
+                 ),
+               ],
+             ),
+           ),
+         ),
+         Positioned(
+         top: -avatarPositionTop, child: avatarChild)
+       ],
+     );
+   }
+ }
+
+  </code></pre></td>
+    <td><img src="assets/images/alertdialog1.png" width="200"></td>
+    </tr>
+    <tr>
+      <td>Show custom AlertDialog</td>
+      <td></td>
+    </tr>
+    <tr>
+            <td><pre><code>
+//***********************Example code****************************//
+@override
+  Widget build(BuildContext context) {
+    double size = MediaQuery.of(context).size.width;
+    return new SingleChildScrollView(
+        child: new Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+            MyAlertDialog(
+            Container(
+                alignment: Alignment.center,
+                child: MyCustomButton(onPressed: (){},
+                backgroundButtonColor: Colors.red.shade300,
+                width: 100,
+                child: MyCustomText(
+                    title: "Okay",
+                    textScaleFactor: 1.5,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white70,
+                    decoration: BoxDecoration(
+                        color: Colors.transparent),
+                        )
+                    )
+                ),
+                title: "Warning !!!", titleColor: Colors.white70,
+                avatarPositionTop: 10,
+                marginTop: 80,
+                avatarChild: CircleAvatar(
+                  backgroundColor: Colors.red.shade300,
+                  radius: 50.0,
+                  child: Icon(Icons.assistant_photo, size: 50,
+                      color: Colors.white70),
+                ),
+             ),
+          ]
+        )
+     );
+  }         
+</code></pre></td>
+        <td><img src="assets/images/alertdialog2.png" width="200"></td>
+        </tr>
+    <tr>
+         <td>Show the custom AlertDialog</td>
+         <td></td>
+       </tr>
+    <tr>
+   <td><pre><code>
+//***********************Example code****************************//
+MyAlertDialog(
+    Container(
+        alignment: Alignment.centerRight,
+        child: MyCustomButton(onPressed: (){},
+        backgroundButtonColor: alertDialogColor,
+        width: 150,
+        child: MyCustomText(
+            title: "Confirm",
+            textScaleFactor: 1.3,
+            fontWeight: FontWeight.bold,
+            color: Colors.teal,
+            alignment: Alignment.centerRight,
+            decoration: BoxDecoration(color: alertDialogColor),
+            )
+          )
+        ),
+        title: "Success", titleColor: Colors.white70,
+        avatarPositionTop: 8,
+        marginTop: 150,
+        avatarChild: Container(
+         width: 350,
+         height: 170,
+         child: ClipOval(
+            clipBehavior: Clip.hardEdge,
+                child: Container(
+                color: alertDialogColor,
+                    child: Container(
+                    color: alertDialogColor,
+                    child: Icon(
+                        Icons.check_box, 
+                        size: 80,
+                        color: Colors.teal
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+         descriptionWidget: Container(
+            height: 200,
+            child: MyCustomText(
+            title: "You can not . . . "
+            alignment: Alignment.center,
+            color: Colors.white70,
+            textScaleFactor: 1.2,
+         ),
+        ),
+        backendContainerColor: alertDialogColor,
+        alignSubmittedWidget: Alignment.center,
+    ),
+ </code></pre></td>
+            <td><img src="assets/images/alertdialog3.png" width="200"></td>
             </tr>
 </table>
 

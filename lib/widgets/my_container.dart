@@ -6,20 +6,18 @@ import 'package:mise_en_page/my_constants.dart';
 class MyContainer extends Container {
 
   MyContainer(
-      BuildContext context,
-      List<Widget> child,
-      {MainAxisAlignment mainAxisAlignment = MainAxisAlignment.spaceEvenly}) :
-        super(
-        child: new Column(
-          mainAxisAlignment: mainAxisAlignment,
-          children: child,
-        ),
-        height: MediaQuery.of(context).size.height*5/6,
-        width: MediaQuery.of(context).size.width,
-        margin: EdgeInsets.all(25.0),
+      double containerWidth,
+      double containerHeight,
+      Widget child,
+      {MainAxisAlignment mainAxisAlignment = MainAxisAlignment.spaceEvenly,
+        double borderRadius = 48.0
+      }) :super(
+        child: child,
+        height: containerHeight,
+        width: containerWidth,
         alignment: Alignment.center,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.all(Radius.circular(48.0)),
+          borderRadius: BorderRadius.all(Radius.circular(borderRadius)),
             gradient: LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,

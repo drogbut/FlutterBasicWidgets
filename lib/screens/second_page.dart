@@ -1,6 +1,7 @@
+/*
 import 'package:flutter/material.dart';
 import 'file:///C:/Users/user/git/flutter/mise_en_page/lib/screens/scrollable.dart';
-import 'package:mise_en_page/widgets/my_normal_text.dart';
+import 'package:mise_en_page/widgets/my_custom_text.dart';
 
 class SecondPage extends StatefulWidget {
 
@@ -214,3 +215,4 @@ class _SecondPageState extends State<SecondPage> {
 
 
 
+*/

@@ -1,38 +1,57 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
-class MyCustomButton extends StatelessWidget {
-  final double elevation;
-  final double radius;
-  final double width;
-  final double height;
-  final Widget child;
-  final BoxDecoration decoration;
+
+class MyCustomButton extends MaterialButton {
+
   final ShapeBorder shapeBorder;
+  final double width;
   final Alignment alignment;
-  //
-  MyCustomButton({
+  final Widget child;
+  final Color backgroundButtonColor;
+
+  MyCustomButton( {
     Key key,
-    this.elevation = 7.5,
-    this.radius = 25.0,
-    this.width = 300.0,
-    this.height = 50.0,
+    @required VoidCallback onPressed,
+    double borderRadius = 5.0,
+    BoxDecoration boxDecoration,
+    double elevation = 7.5,
+    double height,
+    this.backgroundButtonColor = Colors.black,
     this.child,
-    this.decoration,
     this.shapeBorder,
+    this.width,
     this.alignment,
-  }) : super(key: key);
+  }) :super(
+    key: key,
+    onPressed: onPressed,
+  );
   //
   @override
   Widget build(BuildContext context) {
-    return Card(
-        color: Colors.transparent,
-        elevation: elevation,
-        shape: shapeBorder,
-        child: Container(
-            alignment: alignment,
-            width: width,
-            height: height,
-            decoration: decoration,
-            child: child));
+    return  Card(
+      color: backgroundButtonColor,
+      elevation: elevation,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
+      child: Container(
+        width: width,
+        child: FlatButton(
+          onPressed: onPressed,
+          colorBrightness: Brightness.dark,
+          splashColor: Colors.deepPurpleAccent,
+          highlightColor: Colors.red,
+          focusColor: Colors.brown,
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(5.0))
+          ),
+          child: child,
+        ),
+      ),
+
+    );
+
+
   }
 }
+
+

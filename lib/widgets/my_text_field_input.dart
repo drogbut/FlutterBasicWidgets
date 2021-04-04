@@ -7,6 +7,7 @@ class MyTextInputField extends StatelessWidget {
   final IconData actionIcon1;
   final IconData actionIcon2;
   final String hint;
+  final double borderRadius;
   final TextInputType inputType;
   final TextInputAction inputAction;
   final bool obscureText;
@@ -24,7 +25,7 @@ class MyTextInputField extends StatelessWidget {
     this.actionIcon2,
     this.obscureText = false,
     this.maxLines,
-    this.containerHeight,
+    this.containerHeight, this.borderRadius = 20,
   }) : super(key: key);
 
   //------------ methods------------------//
@@ -38,8 +39,8 @@ class MyTextInputField extends StatelessWidget {
           width: size.width * 0.8,
           constraints: BoxConstraints.tightFor(height: containerHeight),
           decoration: BoxDecoration(
-            color: colorIcon,
-            borderRadius: BorderRadius.circular(20),
+            color: Colors.white70,
+            borderRadius: BorderRadius.circular(borderRadius),
             border: Border.all(width: 1.0, color: colorText),
           ),
           child: Row(
@@ -48,7 +49,7 @@ class MyTextInputField extends StatelessWidget {
               Container(
                 child: Icon(
                   leadingIcon,
-                  color: colorText,
+                  color: alertDialogColor,
                 ),
                 padding: EdgeInsets.symmetric(horizontal: 10.0),
               ),
