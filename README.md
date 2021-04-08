@@ -700,6 +700,30 @@ ListView(
         ).toList()
     ],
 )
+//************************Methoden**************************//
+onItemClicked(CkeckBoxModel item){
+    final newValue = !item.value;
+    setState(() {
+      item.value = newValue;
+      if(!newValue){
+        allchecked.value = false;
+      }else{
+        final allListChecked = checkboxList.every((
+        element) => element.value);
+        allchecked.value = allListChecked;
+      }
+    });
+  }
+  //
+   onAllClicked(CkeckBoxModel item){
+      final newValue = !item.value;
+      setState(() {
+        item.value = newValue;
+        checkboxList.forEach((element) {
+          element.value = newValue;
+        });
+      });
+    }
 </code></pre></td>
     <td><img src="assets/images/Checkbox.png" width="200"></td>
    </tr>
