@@ -648,6 +648,63 @@ MyAlertDialog(
             </tr>
 </table>
 
+## 6. My custom CheckBox
+Try out CheckBox widget and it's properties directly from [DartPad](https://dartpad.dartlang.org/flutter)
+<table style="width:800px">
+    <tr>
+        <td>Play with CheckBox properties</td>
+        <td><a href="https://www.youtube.com/watch?v=RkSqPAn9szs">Learn more CheckboxListTile</a></td>
+    </tr>
+    <tr>
+        <td><pre><code>
+//***********************Example code****************************//
+//***********************CkeckBoxModel class ********************//
+ class CkeckBoxModel {
+   String title;
+   bool value;
+   CkeckBoxModel({@required this.title, this.value = false});
+ }
+//
+//****Init the CkeckBoxModel outside of `Build`****************//
+  final allchecked = CkeckBoxModel(title: "Allow all checked");
+    final checkboxList = [
+      CkeckBoxModel(title: "title 1", value: false),
+      CkeckBoxModel(title: "title 2", value: false),
+      CkeckBoxModel(title: "title 3", value: false),
+      CkeckBoxModel(title: "title 4", value: false),
+      CkeckBoxModel(title: "title 5", value: false),
+    ];
+//**************************** `Build`************************//
+ListView(
+    children: [
+       Divider(),
+       ListTile(
+            title: Text(allchecked.title, textScaleFactor: 2.0,
+            style: TextStyle(fontWeight: FontWeight.bold),),
+            onTap: () => onAllClicked(allchecked),
+            leading: Checkbox(
+            value: allchecked.value,
+             onChanged: (value) => onAllClicked(allchecked),
+                ),
+            ),
+        Container(height: 3, color: Colors.black,),
+        ...checkboxList.map((item) =>
+        ListTile(
+            title: Text(item.title, textScaleFactor: 1.4,),
+             onTap: () => onItemClicked(item),
+             leading: Checkbox(
+             value: item.value,
+             onChanged: (value) => onItemClicked(item),
+              ),
+             ),
+        ).toList()
+    ],
+)
+</code></pre></td>
+    <td><img src="assets/images/Checkbox.png" width="200"></td>
+   </tr>
+</table>
+
 ### Learn more on Flutter    
 [Official Flutter documentation](https://flutter.dev/docs) <br>
 [Flutter widget list](https://flutter.dev/docs/development/ui/widgets) <br>

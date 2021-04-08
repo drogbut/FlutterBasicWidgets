@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:mise_en_page/model/checkbox_model.dart';
 import 'package:mise_en_page/my_constants.dart';
 import 'package:mise_en_page/widgets/my_widgets.dart';
 
@@ -12,6 +13,14 @@ class Body extends StatefulWidget {
 
 class _BodyState extends State<Body> {
 
+  final allchecked = CkeckBoxModel(title: "Allow all checked");
+  final checkboxList = [
+    CkeckBoxModel(title: "title 1", value: false),
+    CkeckBoxModel(title: "title 2", value: false),
+    CkeckBoxModel(title: "title 3", value: false),
+    CkeckBoxModel(title: "title 4", value: false),
+    CkeckBoxModel(title: "title 5", value: false),
+  ];
   //SecondPage secondPage;
   int count = 4;
 
@@ -30,7 +39,35 @@ class _BodyState extends State<Body> {
           child: new Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              MyAlertDialog(
+              MyContainer(size, size,
+                  ListView(
+                    children: [
+                      Divider(),
+                      ListTile(
+                        title: Text(allchecked.title, textScaleFactor: 2.0,
+                        style: TextStyle(fontWeight: FontWeight.bold),),
+                        onTap: () => onAllClicked(allchecked),
+                        leading: Checkbox(
+                          value: allchecked.value,
+                          onChanged: (value) => onAllClicked(allchecked),
+                        ),
+                      ),
+                      Container(height: 3, color: Colors.black,),
+                      ...checkboxList.map((item) =>
+                          ListTile(
+                            title: Text(item.title, textScaleFactor: 1.4,),
+                            onTap: () => onItemClicked(item),
+                            leading: Checkbox(
+                              value: item.value,
+                              onChanged: (value) => onItemClicked(item),
+                            ),
+                          ),
+                      ).toList()
+                    ],
+                  )
+              )
+
+              /*MyAlertDialog(
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.end,
@@ -226,7 +263,7 @@ class _BodyState extends State<Body> {
                 ),
                 backendContainerColor: alertDialogColor,
                 alignSubmittedWidget: Alignment.center,
-              ),
+              ),*/
 /*              MyAlertDialog(
                 containerHeight: size,
                 containerWidth: size,
@@ -586,6 +623,29 @@ class _BodyState extends State<Body> {
           )
       ),
     );
+  }
+
+  onAllClicked(CkeckBoxModel item){
+    final newValue = !item.value;
+    setState(() {
+      item.value = newValue;
+      checkboxList.forEach((element) {
+        element.value = newValue;
+      });
+    });
+  }
+
+  onItemClicked(CkeckBoxModel item){
+    final newValue = !item.value;
+    setState(() {
+      item.value = newValue;
+      if(!newValue){
+        allchecked.value = false;
+      }else{
+        final allListChecked = checkboxList.every((element) => element.value);
+        allchecked.value = allListChecked;
+      }
+    });
   }
 
   void onCountChanged(int val) {

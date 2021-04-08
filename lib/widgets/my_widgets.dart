@@ -8,3 +8,4 @@ export 'my_custom_button.dart';
 export 'my_card_with_child.dart';
 export 'my_padding_with_child.dart';
 export 'my_alert_dialog.dart';
+export 'my_checkbox.dart';
